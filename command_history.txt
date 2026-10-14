@@ -1,0 +1,3 @@
+(Set-ExecutionPolicy -Scope Process -ExecutionPolicy RemoteSigned) ; (& "c:\Users\emedi\OneDrive - Coventry University\PROJECT DOCUMENTS\MSc-VIN-PaddleOCR\venv\Scripts\Activate.ps1")
+doskey /history
+doskey /history > command_history.txt
