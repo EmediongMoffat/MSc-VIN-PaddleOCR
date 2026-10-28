@@ -1,0 +1,58 @@
+PROJECT: AI-Based OCR for VIN Reading
+DATE: 2026-10-28
+PYTHON:
+Python 3.12.10
+
+PADDLEPADDLE GPU PACKAGE:
+Name: paddlepaddle-gpu
+Version: 3.3.0
+Summary: Parallel Distributed Deep Learning
+Home-page: https://www.paddlepaddle.org.cn/
+Author: 
+Author-email: Paddle-better@baidu.com
+License: Apache Software License
+Location: C:\Users\emedi\OneDrive - Coventry University\PROJECT DOCUMENTS\MSC-VIN-YOLO_to_PADDLEOCR\venv\Lib\site-packages
+Requires: httpx, networkx, numpy, nvidia-cublas, nvidia-cuda-runtime, nvidia-cudnn-cu13, nvidia-cufft, nvidia-curand, nvidia-cusolver, nvidia-cusparse, opt-einsum, Pillow, protobuf, safetensors, setuptools, typing-extensions
+Required-by: 
+
+PADDLEOCR GIT COMMIT:
+dab3fe35379033fdcb2d0e9572fac0b36c9a9ebf
+
+GPU AND DRIVER:
+Wed Oct 28 12:23:09 2026       
++-----------------------------------------------------------------------------------------+
+| NVIDIA-SMI 617.14                 KMD Version: 617.14        CUDA UMD Version: 13.4     |
++-----------------------------------------+------------------------+----------------------+
+| GPU  Name                  Driver-Model | Bus-Id          Disp.A | Volatile Uncorr. ECC |
+| Fan  Temp   Perf          Pwr:Usage/Cap |           Memory-Usage | GPU-Util  Compute M. |
+|                                         |                        |               MIG M. |
+|=========================================+========================+======================|
+|   0  NVIDIA GeForce RTX 4050 ...  WDDM  |   00000000:01:00.0 Off |                  N/A |
+| N/A   46C    P0             16W /  140W |       0MiB /   6141MiB |      0%      Default |
+|                                         |                        |                  N/A |
++-----------------------------------------+------------------------+----------------------+
+
++-----------------------------------------------------------------------------------------+
+| Processes:                                                                              |
+|  GPU   GI   CI              PID   Type   Process name                        GPU Memory |
+|        ID   ID                                                               Usage      |
+|=========================================================================================|
+|  No running processes found                                                             |
++-----------------------------------------------------------------------------------------+
+
+
+### Environment setup milestone — 28 October 2026
+
+- Python: 3.12.10
+- PaddlePaddle GPU: 3.3.0
+- GPU: NVIDIA GeForce RTX 4050, 6 GB VRAM
+- NVIDIA driver: 617.14
+- PaddleOCR Git commit: `dab3fe35379033fdcb2d0e9572fac0b36c9a9ebf`
+- GPU verification: PASSED
+- Matrix multiplication on `gpu:0`: PASSED
+- CUDA DLL registration: automatic setup configured using `sitecustomize.py`; final `paddle.utils.run_check()` passed.
+- VIN dataset preparation: pending
+- VIN OCR training: not started
+- OCR performance metrics: not measured
+
+Note: The automatic DLL setup was tested in the current virtual environment. It must also be checked when launching the actual OCR training scripts.

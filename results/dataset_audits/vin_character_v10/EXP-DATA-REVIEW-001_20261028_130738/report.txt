@@ -1,0 +1,11 @@
+VIN IMAGE REVIEW LIST
+Date/time: 2026-10-28T13:07:38
+Dataset: C:\Users\emedi\OneDrive - Coventry University\PROJECT DOCUMENTS\MSC-VIN-YOLO_to_PADDLEOCR\data\raw\YOLOv5PYTORCH_VIN
+Images checked: 618
+Images requiring review: 6
+Expected character boxes per VIN: 17
+CSV report: C:\Users\emedi\OneDrive - Coventry University\PROJECT DOCUMENTS\MSC-VIN-YOLO_to_PADDLEOCR\results\dataset_audits\vin_character_v10\EXP-DATA-REVIEW-001_20261028_130738\images_to_review.csv
+Note: this identifies files for review; it does not verify their visual annotations.
+
+
+I CHECK AND SAW THAT FOR SOME THAT WERE LESS CHRARCTER BOXES, SOME VIN CHARACTERS WERE SCRAPED OFF THE METAL WHILE THE ONE THAT HAD ZERO, ALL WERE SCRAPED OFF

@@ -1,0 +1,19 @@
+{
+    "experiment_id": "EXP-DATA-AUDIT-001",
+    "run_timestamp": "2026-10-28T13:00:03",
+    "python_version": "3.12.10 (tags/v3.12.10:0cc8128, Apr  8 2025, 12:21:36) [MSC v.1943 64 bit (AMD64)]",
+    "platform": "Windows-11-10.0.26300-SP0",
+    "script": "C:\\Users\\emedi\\OneDrive - Coventry University\\PROJECT DOCUMENTS\\MSC-VIN-YOLO_to_PADDLEOCR\\scripts\\inspect_vin_dataset.py",
+    "results_directory": "C:\\Users\\emedi\\OneDrive - Coventry University\\PROJECT DOCUMENTS\\MSC-VIN-YOLO_to_PADDLEOCR\\results\\dataset_audits\\vin_character_v10\\EXP-DATA-AUDIT-001_20261028_130003_092833",
+    "dataset_split_names": [
+        "train",
+        "valid",
+        "test"
+    ],
+    "result_files": [
+        "report.txt",
+        "reconstructed_candidates.csv",
+        "summary.json",
+        "run_metadata.json"
+    ]
+}

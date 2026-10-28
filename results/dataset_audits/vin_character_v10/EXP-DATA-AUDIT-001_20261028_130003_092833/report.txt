@@ -1,0 +1,55 @@
+VIN DATASET AUDIT
+Date/time: 2026-10-28T13:00:02
+Dataset: C:\Users\emedi\OneDrive - Coventry University\PROJECT DOCUMENTS\MSC-VIN-YOLO_to_PADDLEOCR\data\raw\YOLOv5PYTORCH_VIN
+Declared classes: {0: '0', 1: '1', 2: '2', 3: '3', 4: '4', 5: '5', 6: '6', 7: '7', 8: '8', 9: '9', 10: 'C', 11: 'D', 12: 'E', 13: 'G', 14: 'H', 15: 'J', 16: 'L', 17: 'R', 18: 'S', 19: 'T', 20: 'X', 21: 'Y'}
+Note: reconstructed strings are derived from labels, not independently verified truth.
+
+=== TRAIN ===
+Images: 465
+Label files: 465
+Images without labels: 0
+Label files without images: 0
+Valid parsed character boxes by image count: {0: 1, 7: 1, 8: 1, 12: 1, 13: 1, 17: 460}
+Label/coordinate errors: 0
+Unknown class IDs: []
+
+=== VALID ===
+Images: 102
+Label files: 102
+Images without labels: 0
+Label files without images: 0
+Valid parsed character boxes by image count: {8: 1, 17: 101}
+Label/coordinate errors: 0
+Unknown class IDs: []
+
+=== TEST ===
+Images: 51
+Label files: 51
+Images without labels: 0
+Label files without images: 0
+Valid parsed character boxes by image count: {17: 51}
+Label/coordinate errors: 0
+Unknown class IDs: []
+
+=== OVERALL SUMMARY ===
+Total images found: 618
+Total label files found: 618
+Images grouped by number of parsed boxes: {0: 1, 7: 1, 8: 2, 12: 1, 13: 1, 17: 612}
+Total label/coordinate errors: 0
+Unknown class IDs overall: []
+Images with exactly 17 parsed boxes and no detected row errors: 612
+
+Up to 10 reconstructed 17-character strings for manual visual verification:
+train | VIN_2025-03-25-14-35-22_bmp.rf.55f890397bb8c14e226b233aed01739f.jpg | 5J8YD8H8XSL003636 | boxes=17
+train | VIN_2025-03-25-14-36-07_bmp.rf.d110a0f38da3ef6b932ac1e487af293c.jpg | 5J8TC2H55SL023521 | boxes=17
+train | VIN_2025-03-25-14-37-37_bmp.rf.fe3946836a26a2dd17f3ea5b07bcdaaf.jpg | 5J8TC2H52SL023525 | boxes=17
+train | VIN_2025-03-25-14-39-13_bmp.rf.6ee4920c02800a6dd9d200153f253e08.jpg | 5J8TC2H58SL023528 | boxes=17
+train | VIN_2025-03-25-14-40-05_bmp.rf.612c3986e6bea55302d60adfc0311bbb.jpg | 5J8TC2H5XSL023529 | boxes=17
+train | VIN_2025-03-25-14-40-50_bmp.rf.7ea56c50cbb639fa6ac1d770a0a18b96.jpg | 5J8TC2H56SL023530 | boxes=17
+train | VIN_2025-03-25-14-42-26_bmp.rf.74661746f72a0a5eccebb8773d3ef804.jpg | 5J8TC2H5XSL023532 | boxes=17
+train | VIN_2025-03-25-14-43-11_bmp.rf.609e9ac92cbfe88980006b6daef8d91d.jpg | 5J8TC2H53SL023534 | boxes=17
+train | VIN_2025-03-25-14-44-42_bmp.rf.6e1ff37c81fd654e807be7efeb2ea181.jpg | 5J8TC2H57SL023536 | boxes=17
+train | VIN_2025-03-25-14-45-33_bmp.rf.f1b72f874ea5b8b003648e56f1cd4f04.jpg | 5J8TC2H59SL023523 | boxes=17
+
+IMPORTANT: This audit does not prove that a reconstructed VIN is correct.
+Visually compare the listed strings with their original images before training.

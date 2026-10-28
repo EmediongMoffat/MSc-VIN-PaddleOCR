@@ -1,0 +1,12 @@
+
+# requirements.txt — AI-Based VIN OCR
+# Python: 3.12.10
+# PaddlePaddle GPU: 3.3.0
+# GPU: NVIDIA GeForce RTX 4050, 6 GB VRAM
+# PaddleOCR commit: dab3fe35379033fdcb2d0e9572fac0b36c9a9ebf
+
+--extra-index-url https://www.paddlepaddle.org.cn/packages/stable/cu130/
+
+paddlepaddle-gpu==3.3.0
+numpy==2.4.1
+opencv-python==5.0.0.93

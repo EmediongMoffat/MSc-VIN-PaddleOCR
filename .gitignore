@@ -1,0 +1,27 @@
+# Python environment and cache
+venv/
+.venv/
+__pycache__/
+*.py[cod]
+
+# Raw and generated dataset files
+data/raw/
+data/processed/
+
+# Model checkpoints and weights
+checkpoints/
+*.pdparams
+*.pdopt
+*.pdmodel
+*.pdiparams
+*.onnx
+*.pt
+*.pth
+
+# Cloned PaddleOCR repository: keep it separate
+PaddleOCR/
+
+# Generated outputs
+output/
+runs/
+*.tmp
