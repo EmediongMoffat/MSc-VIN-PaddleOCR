@@ -1,0 +1,181 @@
+# EXP-VIN-DET-FT-002
+# Copy of EXP-VIN-DET-FT-001 (DET SETTINGS.txt) with fixes for the VIN plate data.
+# Changes from 001 are marked "# CHANGED".
+
+Global:
+  model_name: EXP-VIN-DET-FT-002                     # CHANGED
+  debug: false
+  use_gpu: true
+  epoch_num: &epoch_num 200                          # CHANGED: 500 not needed, best was epoch 290 of a bad setup
+  log_smooth_window: 20
+  print_batch_step: 20                               # CHANGED: ~54 iters per epoch, 100 hides progress
+  save_model_dir: "C:/Users/emedi/OneDrive - Coventry University/PROJECT DOCUMENTS/MSC-VIN-YOLO_to_PADDLEOCR/checkpoints/EXP-VIN-DET-FT-002"   # CHANGED
+  save_epoch_step: 10
+  eval_batch_step:
+    - 0
+    - 270                                            # CHANGED: evaluate about every 5 epochs
+  cal_metric_during_train: false
+  checkpoints: null                                  # start fresh, do NOT resume 001
+  # CHANGED: 001 loaded only the backbone (PPLCNetV3_x0_75_ocr_det). Start from the full
+  # trained PP-OCRv5 mobile detector so the model already knows how to find text.
+  pretrained_model: https://paddle-model-ecology.bj.bcebos.com/paddlex/official_pretrained_model/PP-OCRv5_mobile_det_pretrained.pdparams
+  save_inference_dir: null
+  use_visualdl: false
+  infer_img: "C:/Users/emedi/OneDrive - Coventry University/PROJECT DOCUMENTS/MSC-VIN-YOLO_to_PADDLEOCR/data/processed/paddleocr_vin/EXP-YOLO-PPOCR-CONVERT-001_20261028_132836_267609/detection/images/valid/VIN_2025-03-25-14-38-28_bmp.rf.bc4e608e9c19c4cbd26629b548554238.jpg"
+  save_res_path: "C:/Users/emedi/OneDrive - Coventry University/PROJECT DOCUMENTS/MSC-VIN-YOLO_to_PADDLEOCR/results/experiments/EXP-VIN-DET-FT-002/detection_predictions.txt"   # CHANGED
+  d2s_train_image_shape: [3, 640, 640]
+  distributed: false
+
+Architecture:
+  model_type: det
+  algorithm: DB
+  Transform: null
+  Backbone:
+    name: PPLCNetV3
+    scale: 0.75
+    det: True
+  Neck:
+    name: RSEFPN
+    out_channels: 96
+    shortcut: True
+  Head:
+    name: DBHead
+    k: 50
+    fix_nan: True
+
+Loss:
+  name: DBLoss
+  balance_loss: true
+  main_loss_type: DiceLoss
+  alpha: 5
+  beta: 10
+  ohem_ratio: 3
+
+Optimizer:
+  name: Adam
+  beta1: 0.9
+  beta2: 0.999
+  lr:
+    name: Cosine
+    learning_rate: 0.0005                            # CHANGED: lower LR for fine tuning a trained detector
+    warmup_epoch: 2
+  regularizer:
+    name: L2
+    factor: 5.0e-05
+
+PostProcess:
+  name: DBPostProcess
+  thresh: 0.3
+  box_thresh: 0.7                                    # CHANGED: removes small false boxes (e.g. the one on the left bracket)
+  max_candidates: 1000
+  unclip_ratio: 2.0                                  # CHANGED: helps join a VIN that is split into two boxes
+
+Metric:
+  name: DetMetric
+  main_indicator: hmean
+
+Train:
+  dataset:
+    name: SimpleDataSet
+    data_dir: "C:/Users/emedi/OneDrive - Coventry University/PROJECT DOCUMENTS/MSC-VIN-YOLO_to_PADDLEOCR/data/processed/paddleocr_vin/EXP-YOLO-PPOCR-CONVERT-001_20261028_132836_267609/detection"
+    label_file_list:
+      - "C:/Users/emedi/OneDrive - Coventry University/PROJECT DOCUMENTS/MSC-VIN-YOLO_to_PADDLEOCR/data/processed/paddleocr_vin/EXP-YOLO-PPOCR-CONVERT-001_20261028_132836_267609/detection/det_gt_train.txt"
+    ratio_list: [1.0]
+    transforms:
+      - DecodeImage:
+          img_mode: BGR
+          channel_first: false
+      - DetLabelEncode: null
+      # CHANGED: CopyPaste removed (one text line per image, it adds little and can paste broken VIN pieces)
+      - IaaAugment:
+          augmenter_args:
+            # CHANGED: Fliplr removed. A mirrored VIN is not a real VIN.
+            - type: Affine
+              args:
+                rotate:
+                  - -5                               # CHANGED: plates are near horizontal
+                  - 5
+            - type: Resize
+              args:
+                size:
+                  - 0.5                              # CHANGED: was 0.5 to 3. At 3x a 1920 px image is
+                  - 1.2                              # 5760 px wide and a 640 crop almost never holds the full VIN
+      - EastRandomCropData:
+          size:
+            - 960                                    # CHANGED: wider crop so the whole 17 character VIN fits
+            - 960
+          max_tries: 50
+          keep_ratio: true
+      - MakeBorderMap:
+          shrink_ratio: 0.4
+          thresh_min: 0.3
+          thresh_max: 0.7
+          total_epoch: *epoch_num
+      - MakeShrinkMap:
+          shrink_ratio: 0.4
+          min_text_size: 8
+          total_epoch: *epoch_num
+      - NormalizeImage:
+          scale: 1./255.
+          mean:
+            - 0.485
+            - 0.456
+            - 0.406
+          std:
+            - 0.229
+            - 0.224
+            - 0.225
+          order: hwc
+      - ToCHWImage: null
+      - KeepKeys:
+          keep_keys:
+            - image
+            - threshold_map
+            - threshold_mask
+            - shrink_map
+            - shrink_mask
+  loader:
+    shuffle: true
+    drop_last: false
+    batch_size_per_card: 4                           # CHANGED: 960 crops use more GPU memory; use 8 if it fits
+    num_workers: 2                                   # CHANGED: 8 workers often hangs or slows on Windows
+
+Eval:
+  dataset:
+    name: SimpleDataSet
+    data_dir: "C:/Users/emedi/OneDrive - Coventry University/PROJECT DOCUMENTS/MSC-VIN-YOLO_to_PADDLEOCR/data/processed/paddleocr_vin/EXP-YOLO-PPOCR-CONVERT-001_20261028_132836_267609/detection"
+    label_file_list:
+      - "C:/Users/emedi/OneDrive - Coventry University/PROJECT DOCUMENTS/MSC-VIN-YOLO_to_PADDLEOCR/data/processed/paddleocr_vin/EXP-YOLO-PPOCR-CONVERT-001_20261028_132836_267609/detection/det_gt_valid.txt"
+    transforms:
+      - DecodeImage:
+          img_mode: BGR
+          channel_first: false
+      - DetLabelEncode: null
+      - DetResizeForTest:                            # CHANGED: explicit size so eval matches the full image
+          limit_side_len: 1920
+          limit_type: max
+      - NormalizeImage:
+          scale: 1./255.
+          mean:
+            - 0.485
+            - 0.456
+            - 0.406
+          std:
+            - 0.229
+            - 0.224
+            - 0.225
+          order: hwc
+      - ToCHWImage: null
+      - KeepKeys:
+          keep_keys:
+            - image
+            - shape
+            - polys
+            - ignore_tags
+  loader:
+    shuffle: false
+    drop_last: false
+    batch_size_per_card: 1
+    num_workers: 0                                   # CHANGED: safer on Windows
+
+profiler_options: null

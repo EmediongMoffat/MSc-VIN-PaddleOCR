@@ -1,6 +1,6 @@
 {
     "experiment_id": "EXP-DATA-AUDIT-001",
-    "run_timestamp": "20261028_130003_092833",
+    "run_timestamp": "20261029_124129_207348",
     "dataset_id": "vin_character_v10",
     "dataset_path": "C:\\Users\\emedi\\OneDrive - Coventry University\\PROJECT DOCUMENTS\\MSC-VIN-YOLO_to_PADDLEOCR\\data\\raw\\YOLOv5PYTORCH_VIN",
     "dataset_config": "C:\\Users\\emedi\\OneDrive - Coventry University\\PROJECT DOCUMENTS\\MSC-VIN-YOLO_to_PADDLEOCR\\data\\raw\\YOLOv5PYTORCH_VIN\\data.yaml",
@@ -28,14 +28,9 @@
         "20": "X",
         "21": "Y"
     },
-    "total_images_found": 618,
-    "total_label_files_found": 618,
+    "total_images_found": 612,
+    "total_label_files_found": 612,
     "box_count_distribution": {
-        "0": 1,
-        "7": 1,
-        "8": 2,
-        "12": 1,
-        "13": 1,
         "17": 612
     },
     "total_label_errors": 0,

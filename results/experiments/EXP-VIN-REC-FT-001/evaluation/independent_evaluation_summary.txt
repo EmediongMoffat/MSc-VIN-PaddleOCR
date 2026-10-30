@@ -1,0 +1,26 @@
+INDEPENDENT VIN OCR RECOGNITION EVALUATION
+===========================================
+Experiment: EXP-VIN-REC-FT-001
+Test samples: 51
+Exact matches: 50
+Incorrect strings: 1
+Exact-string accuracy: 98.0392%
+Character accuracy: 99.8847%
+CER: 0.001153
+CER (%): 0.1153%
+String error rate: 1.9608%
+Total character edits: 1
+Ground-truth characters: 867
+Average confidence: 0.949286
+
+ERROR BREAKDOWN
+---------------
+Substitutions: 0
+Deletions: 1
+Insertions: 0
+
+OUTPUT FILES
+------------
+recognition_metrics.csv
+incorrect_predictions.csv
+character_confusions.csv

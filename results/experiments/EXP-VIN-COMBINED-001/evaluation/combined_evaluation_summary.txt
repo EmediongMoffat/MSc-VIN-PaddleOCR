@@ -1,0 +1,39 @@
+EXP-VIN-COMBINED-001
+Combined VIN Detection and Recognition Evaluation
+=================================================
+
+Dataset
+-------
+Test samples: 51
+Original test images: C:\Users\emedi\OneDrive - Coventry University\PROJECT DOCUMENTS\MSC-VIN-YOLO_to_PADDLEOCR\data\processed\paddleocr_vin\EXP-YOLO-PPOCR-CONVERT-001_20261028_132836_267609\detection
+Ground-truth labels: C:\Users\emedi\OneDrive - Coventry University\PROJECT DOCUMENTS\MSC-VIN-YOLO_to_PADDLEOCR\data\processed\paddleocr_vin\EXP-YOLO-PPOCR-CONVERT-001_20261028_132836_267609\detection\det_gt_test.txt
+
+Model configuration
+-------------------
+Detector: PP-OCRv5 Mobile, fine-tuned EXP-VIN-DET-FT-002
+Recogniser: PP-OCRv5 Mobile, fine-tuned EXP-VIN-REC-FT-001
+Detection crop padding: X=10%, Y=30%
+
+Combined pipeline results
+-------------------------
+Exact VIN matches: 49
+Incorrect VIN predictions: 2
+Detection/pipeline failures: 0
+
+Exact-string accuracy: 96.0784%
+Character accuracy: 99.7693%
+Character Error Rate (CER): 0.002307
+String Error Rate: 3.9216%
+
+Total character edits: 2
+Total ground-truth characters: 867
+
+Total evaluation time: 3.5008 seconds
+Average end-to-end latency: 0.0686 seconds/image
+End-to-end throughput: 14.5683 images/second
+
+Important
+---------
+Detection failures are counted as unsuccessful VIN predictions.
+Recognition uses crops generated from predicted detection coordinates.
+Ground-truth coordinates are not used to create test-time crops.

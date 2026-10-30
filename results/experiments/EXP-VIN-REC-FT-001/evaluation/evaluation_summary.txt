@@ -1,0 +1,21 @@
+VIN OCR RECOGNITION EVALUATION
+=============================================
+Experiment: EXP-VIN-REC-FT-001
+Ground-truth samples: 51
+Predictions found: 51
+Missing predictions: 0
+Extra predictions: 0
+
+Exact matches: 50
+Incorrect strings: 1
+Total character edits: 1
+Total ground-truth characters: 867
+
+Exact-string accuracy: 98.0392%
+Character accuracy: 99.8847%
+Character Error Rate (CER): 0.001153
+Character Error Rate (%): 0.1153%
+String Error Rate: 1.9608%
+Average confidence: 0.949286
+
+Per-image results: ..\results\experiments\EXP-VIN-REC-FT-001\evaluation\test_evaluation.csv

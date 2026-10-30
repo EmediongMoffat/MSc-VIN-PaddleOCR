@@ -1,24 +1,24 @@
 VIN DATASET AUDIT
-Date/time: 2026-10-28T13:00:02
+Date/time: 2026-10-29T12:41:25
 Dataset: C:\Users\emedi\OneDrive - Coventry University\PROJECT DOCUMENTS\MSC-VIN-YOLO_to_PADDLEOCR\data\raw\YOLOv5PYTORCH_VIN
 Declared classes: {0: '0', 1: '1', 2: '2', 3: '3', 4: '4', 5: '5', 6: '6', 7: '7', 8: '8', 9: '9', 10: 'C', 11: 'D', 12: 'E', 13: 'G', 14: 'H', 15: 'J', 16: 'L', 17: 'R', 18: 'S', 19: 'T', 20: 'X', 21: 'Y'}
 Note: reconstructed strings are derived from labels, not independently verified truth.
 
 === TRAIN ===
-Images: 465
-Label files: 465
+Images: 460
+Label files: 460
 Images without labels: 0
 Label files without images: 0
-Valid parsed character boxes by image count: {0: 1, 7: 1, 8: 1, 12: 1, 13: 1, 17: 460}
+Valid parsed character boxes by image count: {17: 460}
 Label/coordinate errors: 0
 Unknown class IDs: []
 
 === VALID ===
-Images: 102
-Label files: 102
+Images: 101
+Label files: 101
 Images without labels: 0
 Label files without images: 0
-Valid parsed character boxes by image count: {8: 1, 17: 101}
+Valid parsed character boxes by image count: {17: 101}
 Label/coordinate errors: 0
 Unknown class IDs: []
 
@@ -32,9 +32,9 @@ Label/coordinate errors: 0
 Unknown class IDs: []
 
 === OVERALL SUMMARY ===
-Total images found: 618
-Total label files found: 618
-Images grouped by number of parsed boxes: {0: 1, 7: 1, 8: 2, 12: 1, 13: 1, 17: 612}
+Total images found: 612
+Total label files found: 612
+Images grouped by number of parsed boxes: {17: 612}
 Total label/coordinate errors: 0
 Unknown class IDs overall: []
 Images with exactly 17 parsed boxes and no detected row errors: 612

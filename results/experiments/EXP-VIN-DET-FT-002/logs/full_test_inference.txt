@@ -1,0 +1,252 @@
+INFO: Could not find files for the given pattern(s).
+C:\Users\emedi\OneDrive - Coventry University\PROJECT DOCUMENTS\MSC-VIN-YOLO_to_PADDLEOCR\venv\Lib\site-packages\paddle\utils\cpp_extension\extension_utils.py:712: UserWarning: No ccache found. Please be aware that recompiling all source files may be required. You can download and install ccache from: https://github.com/ccache/ccache/blob/master/doc/INSTALL.md
+  warnings.warn(warning_message)
+Skipping import of the encryption module.
+[2026/10/30 10:02:16] ppocr INFO: Architecture : 
+[2026/10/30 10:02:16] ppocr INFO:     Backbone : 
+[2026/10/30 10:02:16] ppocr INFO:         det : True
+[2026/10/30 10:02:16] ppocr INFO:         name : PPLCNetV3
+[2026/10/30 10:02:16] ppocr INFO:         scale : 0.75
+[2026/10/30 10:02:16] ppocr INFO:     Head : 
+[2026/10/30 10:02:16] ppocr INFO:         fix_nan : True
+[2026/10/30 10:02:16] ppocr INFO:         k : 50
+[2026/10/30 10:02:16] ppocr INFO:         name : DBHead
+[2026/10/30 10:02:16] ppocr INFO:     Neck : 
+[2026/10/30 10:02:16] ppocr INFO:         name : RSEFPN
+[2026/10/30 10:02:16] ppocr INFO:         out_channels : 96
+[2026/10/30 10:02:16] ppocr INFO:         shortcut : True
+[2026/10/30 10:02:16] ppocr INFO:     Transform : None
+[2026/10/30 10:02:16] ppocr INFO:     algorithm : DB
+[2026/10/30 10:02:16] ppocr INFO:     model_type : det
+[2026/10/30 10:02:16] ppocr INFO: Eval : 
+[2026/10/30 10:02:16] ppocr INFO:     dataset : 
+[2026/10/30 10:02:16] ppocr INFO:         data_dir : C:/Users/emedi/OneDrive - Coventry University/PROJECT DOCUMENTS/MSC-VIN-YOLO_to_PADDLEOCR/data/processed/paddleocr_vin/EXP-YOLO-PPOCR-CONVERT-001_20261028_132836_267609/detection
+[2026/10/30 10:02:16] ppocr INFO:         label_file_list : ['C:/Users/emedi/OneDrive - Coventry University/PROJECT DOCUMENTS/MSC-VIN-YOLO_to_PADDLEOCR/data/processed/paddleocr_vin/EXP-YOLO-PPOCR-CONVERT-001_20261028_132836_267609/detection/det_gt_valid.txt']
+[2026/10/30 10:02:16] ppocr INFO:         name : SimpleDataSet
+[2026/10/30 10:02:16] ppocr INFO:         transforms : 
+[2026/10/30 10:02:16] ppocr INFO:             DecodeImage : 
+[2026/10/30 10:02:16] ppocr INFO:                 channel_first : False
+[2026/10/30 10:02:16] ppocr INFO:                 img_mode : BGR
+[2026/10/30 10:02:16] ppocr INFO:             DetLabelEncode : None
+[2026/10/30 10:02:16] ppocr INFO:             DetResizeForTest : 
+[2026/10/30 10:02:16] ppocr INFO:                 limit_side_len : 1920
+[2026/10/30 10:02:16] ppocr INFO:                 limit_type : max
+[2026/10/30 10:02:16] ppocr INFO:             NormalizeImage : 
+[2026/10/30 10:02:16] ppocr INFO:                 mean : [0.485, 0.456, 0.406]
+[2026/10/30 10:02:16] ppocr INFO:                 order : hwc
+[2026/10/30 10:02:16] ppocr INFO:                 scale : 1./255.
+[2026/10/30 10:02:16] ppocr INFO:                 std : [0.229, 0.224, 0.225]
+[2026/10/30 10:02:16] ppocr INFO:             ToCHWImage : None
+[2026/10/30 10:02:16] ppocr INFO:             KeepKeys : 
+[2026/10/30 10:02:16] ppocr INFO:                 keep_keys : ['image', 'shape', 'polys', 'ignore_tags']
+[2026/10/30 10:02:16] ppocr INFO:     loader : 
+[2026/10/30 10:02:16] ppocr INFO:         batch_size_per_card : 1
+[2026/10/30 10:02:16] ppocr INFO:         drop_last : False
+[2026/10/30 10:02:16] ppocr INFO:         num_workers : 0
+[2026/10/30 10:02:16] ppocr INFO:         shuffle : False
+[2026/10/30 10:02:16] ppocr INFO: Global : 
+[2026/10/30 10:02:16] ppocr INFO:     cal_metric_during_train : False
+[2026/10/30 10:02:16] ppocr INFO:     checkpoints : C:/Users/emedi/OneDrive - Coventry University/PROJECT DOCUMENTS/MSC-VIN-YOLO_to_PADDLEOCR/checkpoints/EXP-VIN-DET-FT-002/best_accuracy
+[2026/10/30 10:02:16] ppocr INFO:     d2s_train_image_shape : [3, 640, 640]
+[2026/10/30 10:02:16] ppocr INFO:     debug : False
+[2026/10/30 10:02:16] ppocr INFO:     distributed : False
+[2026/10/30 10:02:16] ppocr INFO:     epoch_num : 200
+[2026/10/30 10:02:16] ppocr INFO:     eval_batch_step : [0, 270]
+[2026/10/30 10:02:16] ppocr INFO:     infer_img : C:/Users/emedi/OneDrive - Coventry University/PROJECT DOCUMENTS/MSC-VIN-YOLO_to_PADDLEOCR/data/processed/paddleocr_vin/EXP-YOLO-PPOCR-CONVERT-001_20261028_132836_267609/detection/images/test
+[2026/10/30 10:02:16] ppocr INFO:     log_smooth_window : 20
+[2026/10/30 10:02:16] ppocr INFO:     model_name : EXP-VIN-DET-FT-002
+[2026/10/30 10:02:16] ppocr INFO:     pretrained_model : https://paddle-model-ecology.bj.bcebos.com/paddlex/official_pretrained_model/PP-OCRv5_mobile_det_pretrained.pdparams
+[2026/10/30 10:02:16] ppocr INFO:     print_batch_step : 20
+[2026/10/30 10:02:16] ppocr INFO:     save_epoch_step : 10
+[2026/10/30 10:02:16] ppocr INFO:     save_inference_dir : None
+[2026/10/30 10:02:16] ppocr INFO:     save_model_dir : C:/Users/emedi/OneDrive - Coventry University/PROJECT DOCUMENTS/MSC-VIN-YOLO_to_PADDLEOCR/checkpoints/EXP-VIN-DET-FT-002
+[2026/10/30 10:02:16] ppocr INFO:     save_res_path : C:/Users/emedi/OneDrive - Coventry University/PROJECT DOCUMENTS/MSC-VIN-YOLO_to_PADDLEOCR/results/experiments/EXP-VIN-DET-FT-002/test/full_test_predictions_expanded.txt
+[2026/10/30 10:02:16] ppocr INFO:     use_gpu : True
+[2026/10/30 10:02:16] ppocr INFO:     use_visualdl : False
+[2026/10/30 10:02:16] ppocr INFO: Loss : 
+[2026/10/30 10:02:16] ppocr INFO:     alpha : 5
+[2026/10/30 10:02:16] ppocr INFO:     balance_loss : True
+[2026/10/30 10:02:16] ppocr INFO:     beta : 10
+[2026/10/30 10:02:16] ppocr INFO:     main_loss_type : DiceLoss
+[2026/10/30 10:02:16] ppocr INFO:     name : DBLoss
+[2026/10/30 10:02:16] ppocr INFO:     ohem_ratio : 3
+[2026/10/30 10:02:16] ppocr INFO: Metric : 
+[2026/10/30 10:02:16] ppocr INFO:     main_indicator : hmean
+[2026/10/30 10:02:16] ppocr INFO:     name : DetMetric
+[2026/10/30 10:02:16] ppocr INFO: Optimizer : 
+[2026/10/30 10:02:16] ppocr INFO:     beta1 : 0.9
+[2026/10/30 10:02:16] ppocr INFO:     beta2 : 0.999
+[2026/10/30 10:02:16] ppocr INFO:     lr : 
+[2026/10/30 10:02:16] ppocr INFO:         learning_rate : 0.0005
+[2026/10/30 10:02:16] ppocr INFO:         name : Cosine
+[2026/10/30 10:02:16] ppocr INFO:         warmup_epoch : 2
+[2026/10/30 10:02:16] ppocr INFO:     name : Adam
+[2026/10/30 10:02:16] ppocr INFO:     regularizer : 
+[2026/10/30 10:02:16] ppocr INFO:         factor : 5e-05
+[2026/10/30 10:02:16] ppocr INFO:         name : L2
+[2026/10/30 10:02:16] ppocr INFO: PostProcess : 
+[2026/10/30 10:02:16] ppocr INFO:     box_thresh : 0.7
+[2026/10/30 10:02:16] ppocr INFO:     max_candidates : 1000
+[2026/10/30 10:02:16] ppocr INFO:     name : DBPostProcess
+[2026/10/30 10:02:16] ppocr INFO:     thresh : 0.3
+[2026/10/30 10:02:16] ppocr INFO:     unclip_ratio : 2.0
+[2026/10/30 10:02:16] ppocr INFO: Train : 
+[2026/10/30 10:02:16] ppocr INFO:     dataset : 
+[2026/10/30 10:02:16] ppocr INFO:         data_dir : C:/Users/emedi/OneDrive - Coventry University/PROJECT DOCUMENTS/MSC-VIN-YOLO_to_PADDLEOCR/data/processed/paddleocr_vin/EXP-YOLO-PPOCR-CONVERT-001_20261028_132836_267609/detection
+[2026/10/30 10:02:16] ppocr INFO:         label_file_list : ['C:/Users/emedi/OneDrive - Coventry University/PROJECT DOCUMENTS/MSC-VIN-YOLO_to_PADDLEOCR/data/processed/paddleocr_vin/EXP-YOLO-PPOCR-CONVERT-001_20261028_132836_267609/detection/det_gt_train.txt']
+[2026/10/30 10:02:16] ppocr INFO:         name : SimpleDataSet
+[2026/10/30 10:02:16] ppocr INFO:         ratio_list : [1.0]
+[2026/10/30 10:02:16] ppocr INFO:         transforms : 
+[2026/10/30 10:02:16] ppocr INFO:             DecodeImage : 
+[2026/10/30 10:02:16] ppocr INFO:                 channel_first : False
+[2026/10/30 10:02:16] ppocr INFO:                 img_mode : BGR
+[2026/10/30 10:02:16] ppocr INFO:             DetLabelEncode : None
+[2026/10/30 10:02:16] ppocr INFO:             IaaAugment : 
+[2026/10/30 10:02:16] ppocr INFO:                 augmenter_args : 
+[2026/10/30 10:02:16] ppocr INFO:                     args : 
+[2026/10/30 10:02:16] ppocr INFO:                         rotate : [-5, 5]
+[2026/10/30 10:02:16] ppocr INFO:                     type : Affine
+[2026/10/30 10:02:16] ppocr INFO:                     args : 
+[2026/10/30 10:02:16] ppocr INFO:                         size : [0.5, 1.2]
+[2026/10/30 10:02:16] ppocr INFO:                     type : Resize
+[2026/10/30 10:02:16] ppocr INFO:             EastRandomCropData : 
+[2026/10/30 10:02:16] ppocr INFO:                 keep_ratio : True
+[2026/10/30 10:02:16] ppocr INFO:                 max_tries : 50
+[2026/10/30 10:02:16] ppocr INFO:                 size : [960, 960]
+[2026/10/30 10:02:16] ppocr INFO:             MakeBorderMap : 
+[2026/10/30 10:02:16] ppocr INFO:                 shrink_ratio : 0.4
+[2026/10/30 10:02:16] ppocr INFO:                 thresh_max : 0.7
+[2026/10/30 10:02:16] ppocr INFO:                 thresh_min : 0.3
+[2026/10/30 10:02:16] ppocr INFO:                 total_epoch : 200
+[2026/10/30 10:02:16] ppocr INFO:             MakeShrinkMap : 
+[2026/10/30 10:02:16] ppocr INFO:                 min_text_size : 8
+[2026/10/30 10:02:16] ppocr INFO:                 shrink_ratio : 0.4
+[2026/10/30 10:02:16] ppocr INFO:                 total_epoch : 200
+[2026/10/30 10:02:16] ppocr INFO:             NormalizeImage : 
+[2026/10/30 10:02:16] ppocr INFO:                 mean : [0.485, 0.456, 0.406]
+[2026/10/30 10:02:16] ppocr INFO:                 order : hwc
+[2026/10/30 10:02:16] ppocr INFO:                 scale : 1./255.
+[2026/10/30 10:02:16] ppocr INFO:                 std : [0.229, 0.224, 0.225]
+[2026/10/30 10:02:16] ppocr INFO:             ToCHWImage : None
+[2026/10/30 10:02:16] ppocr INFO:             KeepKeys : 
+[2026/10/30 10:02:16] ppocr INFO:                 keep_keys : ['image', 'threshold_map', 'threshold_mask', 'shrink_map', 'shrink_mask']
+[2026/10/30 10:02:16] ppocr INFO:     loader : 
+[2026/10/30 10:02:16] ppocr INFO:         batch_size_per_card : 4
+[2026/10/30 10:02:16] ppocr INFO:         drop_last : False
+[2026/10/30 10:02:16] ppocr INFO:         num_workers : 2
+[2026/10/30 10:02:16] ppocr INFO:         shuffle : True
+[2026/10/30 10:02:16] ppocr INFO: profiler_options : None
+[2026/10/30 10:02:16] ppocr INFO: train with paddle 3.3.0 and device Place(gpu:0)
+WARNING: Logging before InitGoogleLogging() is written to STDERR
+W1030 10:02:17.101032 32972 gpu_resources.cc:116] Please NOTE: device: 0, GPU Compute Capability: 8.9, Driver API Version: 13.4, Runtime API Version: 13.4
+[2026/10/30 10:02:17] ppocr INFO: resume from C:/Users/emedi/OneDrive - Coventry University/PROJECT DOCUMENTS/MSC-VIN-YOLO_to_PADDLEOCR/checkpoints/EXP-VIN-DET-FT-002/best_accuracy
+[2026/10/30 10:02:17] ppocr INFO: infer_img: C:/Users/emedi/OneDrive - Coventry University/PROJECT DOCUMENTS/MSC-VIN-YOLO_to_PADDLEOCR/data/processed/paddleocr_vin/EXP-YOLO-PPOCR-CONVERT-001_20261028_132836_267609/detection/images/test\VIN_2025-03-25-14-41-35_bmp.rf.12242d9623090784e8faaf88e6554481.jpg
+[2026/10/30 10:02:17] ppocr INFO: The detected Image saved in C:/Users/emedi/OneDrive - Coventry University/PROJECT DOCUMENTS/MSC-VIN-YOLO_to_PADDLEOCR/results/experiments/EXP-VIN-DET-FT-002/test/det_results/VIN_2025-03-25-14-41-35_bmp.rf.12242d9623090784e8faaf88e6554481.jpg
+[2026/10/30 10:02:17] ppocr INFO: infer_img: C:/Users/emedi/OneDrive - Coventry University/PROJECT DOCUMENTS/MSC-VIN-YOLO_to_PADDLEOCR/data/processed/paddleocr_vin/EXP-YOLO-PPOCR-CONVERT-001_20261028_132836_267609/detection/images/test\VIN_2025-03-25-14-43-57_bmp.rf.8835d3677e9a54fde642ec2e732e56f7.jpg
+[2026/10/30 10:02:17] ppocr INFO: The detected Image saved in C:/Users/emedi/OneDrive - Coventry University/PROJECT DOCUMENTS/MSC-VIN-YOLO_to_PADDLEOCR/results/experiments/EXP-VIN-DET-FT-002/test/det_results/VIN_2025-03-25-14-43-57_bmp.rf.8835d3677e9a54fde642ec2e732e56f7.jpg
+[2026/10/30 10:02:17] ppocr INFO: infer_img: C:/Users/emedi/OneDrive - Coventry University/PROJECT DOCUMENTS/MSC-VIN-YOLO_to_PADDLEOCR/data/processed/paddleocr_vin/EXP-YOLO-PPOCR-CONVERT-001_20261028_132836_267609/detection/images/test\VIN_2025-03-25-14-56-55_bmp.rf.9818f3c980040a30ec434e79eb2ea860.jpg
+[2026/10/30 10:02:18] ppocr INFO: The detected Image saved in C:/Users/emedi/OneDrive - Coventry University/PROJECT DOCUMENTS/MSC-VIN-YOLO_to_PADDLEOCR/results/experiments/EXP-VIN-DET-FT-002/test/det_results/VIN_2025-03-25-14-56-55_bmp.rf.9818f3c980040a30ec434e79eb2ea860.jpg
+[2026/10/30 10:02:18] ppocr INFO: infer_img: C:/Users/emedi/OneDrive - Coventry University/PROJECT DOCUMENTS/MSC-VIN-YOLO_to_PADDLEOCR/data/processed/paddleocr_vin/EXP-YOLO-PPOCR-CONVERT-001_20261028_132836_267609/detection/images/test\VIN_2025-03-25-16-50-14_bmp.rf.a52f802d3f4aeeb4b72be40af62d8505.jpg
+[2026/10/30 10:02:18] ppocr INFO: The detected Image saved in C:/Users/emedi/OneDrive - Coventry University/PROJECT DOCUMENTS/MSC-VIN-YOLO_to_PADDLEOCR/results/experiments/EXP-VIN-DET-FT-002/test/det_results/VIN_2025-03-25-16-50-14_bmp.rf.a52f802d3f4aeeb4b72be40af62d8505.jpg
+[2026/10/30 10:02:18] ppocr INFO: infer_img: C:/Users/emedi/OneDrive - Coventry University/PROJECT DOCUMENTS/MSC-VIN-YOLO_to_PADDLEOCR/data/processed/paddleocr_vin/EXP-YOLO-PPOCR-CONVERT-001_20261028_132836_267609/detection/images/test\VIN_2025-03-25-17-01-10_bmp.rf.5612240290ee66ef988602dcc477e638.jpg
+[2026/10/30 10:02:18] ppocr INFO: The detected Image saved in C:/Users/emedi/OneDrive - Coventry University/PROJECT DOCUMENTS/MSC-VIN-YOLO_to_PADDLEOCR/results/experiments/EXP-VIN-DET-FT-002/test/det_results/VIN_2025-03-25-17-01-10_bmp.rf.5612240290ee66ef988602dcc477e638.jpg
+[2026/10/30 10:02:18] ppocr INFO: infer_img: C:/Users/emedi/OneDrive - Coventry University/PROJECT DOCUMENTS/MSC-VIN-YOLO_to_PADDLEOCR/data/processed/paddleocr_vin/EXP-YOLO-PPOCR-CONVERT-001_20261028_132836_267609/detection/images/test\VIN_2025-03-25-17-35-09_bmp.rf.3891be849dd6ab2324ba5871bbe3d9d2.jpg
+[2026/10/30 10:02:18] ppocr INFO: The detected Image saved in C:/Users/emedi/OneDrive - Coventry University/PROJECT DOCUMENTS/MSC-VIN-YOLO_to_PADDLEOCR/results/experiments/EXP-VIN-DET-FT-002/test/det_results/VIN_2025-03-25-17-35-09_bmp.rf.3891be849dd6ab2324ba5871bbe3d9d2.jpg
+[2026/10/30 10:02:18] ppocr INFO: infer_img: C:/Users/emedi/OneDrive - Coventry University/PROJECT DOCUMENTS/MSC-VIN-YOLO_to_PADDLEOCR/data/processed/paddleocr_vin/EXP-YOLO-PPOCR-CONVERT-001_20261028_132836_267609/detection/images/test\VIN_2025-03-25-17-40-37_bmp.rf.55f990f3275c45528f3b078f640e1145.jpg
+[2026/10/30 10:02:18] ppocr INFO: The detected Image saved in C:/Users/emedi/OneDrive - Coventry University/PROJECT DOCUMENTS/MSC-VIN-YOLO_to_PADDLEOCR/results/experiments/EXP-VIN-DET-FT-002/test/det_results/VIN_2025-03-25-17-40-37_bmp.rf.55f990f3275c45528f3b078f640e1145.jpg
+[2026/10/30 10:02:18] ppocr INFO: infer_img: C:/Users/emedi/OneDrive - Coventry University/PROJECT DOCUMENTS/MSC-VIN-YOLO_to_PADDLEOCR/data/processed/paddleocr_vin/EXP-YOLO-PPOCR-CONVERT-001_20261028_132836_267609/detection/images/test\VIN_2025-03-25-17-42-13_bmp.rf.616ae0bc58dd486a5a3c96dd28eb2a61.jpg
+[2026/10/30 10:02:19] ppocr INFO: The detected Image saved in C:/Users/emedi/OneDrive - Coventry University/PROJECT DOCUMENTS/MSC-VIN-YOLO_to_PADDLEOCR/results/experiments/EXP-VIN-DET-FT-002/test/det_results/VIN_2025-03-25-17-42-13_bmp.rf.616ae0bc58dd486a5a3c96dd28eb2a61.jpg
+[2026/10/30 10:02:19] ppocr INFO: infer_img: C:/Users/emedi/OneDrive - Coventry University/PROJECT DOCUMENTS/MSC-VIN-YOLO_to_PADDLEOCR/data/processed/paddleocr_vin/EXP-YOLO-PPOCR-CONVERT-001_20261028_132836_267609/detection/images/test\VIN_2025-03-25-17-45-20_bmp.rf.fadb3d3712254ac72ff1df1c8a634d5f.jpg
+[2026/10/30 10:02:19] ppocr INFO: The detected Image saved in C:/Users/emedi/OneDrive - Coventry University/PROJECT DOCUMENTS/MSC-VIN-YOLO_to_PADDLEOCR/results/experiments/EXP-VIN-DET-FT-002/test/det_results/VIN_2025-03-25-17-45-20_bmp.rf.fadb3d3712254ac72ff1df1c8a634d5f.jpg
+[2026/10/30 10:02:19] ppocr INFO: infer_img: C:/Users/emedi/OneDrive - Coventry University/PROJECT DOCUMENTS/MSC-VIN-YOLO_to_PADDLEOCR/data/processed/paddleocr_vin/EXP-YOLO-PPOCR-CONVERT-001_20261028_132836_267609/detection/images/test\VIN_2025-03-25-17-46-05_bmp.rf.809fd73388d3b6befcf9cd0208eb2a54.jpg
+[2026/10/30 10:02:19] ppocr INFO: The detected Image saved in C:/Users/emedi/OneDrive - Coventry University/PROJECT DOCUMENTS/MSC-VIN-YOLO_to_PADDLEOCR/results/experiments/EXP-VIN-DET-FT-002/test/det_results/VIN_2025-03-25-17-46-05_bmp.rf.809fd73388d3b6befcf9cd0208eb2a54.jpg
+[2026/10/30 10:02:19] ppocr INFO: infer_img: C:/Users/emedi/OneDrive - Coventry University/PROJECT DOCUMENTS/MSC-VIN-YOLO_to_PADDLEOCR/data/processed/paddleocr_vin/EXP-YOLO-PPOCR-CONVERT-001_20261028_132836_267609/detection/images/test\VIN_2025-03-25-17-56-16_bmp.rf.254bcf564fe43ce5b5b1d00eae350b67.jpg
+[2026/10/30 10:02:19] ppocr INFO: The detected Image saved in C:/Users/emedi/OneDrive - Coventry University/PROJECT DOCUMENTS/MSC-VIN-YOLO_to_PADDLEOCR/results/experiments/EXP-VIN-DET-FT-002/test/det_results/VIN_2025-03-25-17-56-16_bmp.rf.254bcf564fe43ce5b5b1d00eae350b67.jpg
+[2026/10/30 10:02:19] ppocr INFO: infer_img: C:/Users/emedi/OneDrive - Coventry University/PROJECT DOCUMENTS/MSC-VIN-YOLO_to_PADDLEOCR/data/processed/paddleocr_vin/EXP-YOLO-PPOCR-CONVERT-001_20261028_132836_267609/detection/images/test\VIN_2025-03-25-18-21-02_bmp.rf.2efa3ff41c2cf7429edd14954d6249d4.jpg
+[2026/10/30 10:02:20] ppocr INFO: The detected Image saved in C:/Users/emedi/OneDrive - Coventry University/PROJECT DOCUMENTS/MSC-VIN-YOLO_to_PADDLEOCR/results/experiments/EXP-VIN-DET-FT-002/test/det_results/VIN_2025-03-25-18-21-02_bmp.rf.2efa3ff41c2cf7429edd14954d6249d4.jpg
+[2026/10/30 10:02:20] ppocr INFO: infer_img: C:/Users/emedi/OneDrive - Coventry University/PROJECT DOCUMENTS/MSC-VIN-YOLO_to_PADDLEOCR/data/processed/paddleocr_vin/EXP-YOLO-PPOCR-CONVERT-001_20261028_132836_267609/detection/images/test\VIN_2025-03-25-18-31-13_bmp.rf.0030c83425e908fff60370b7a48a4dd5.jpg
+[2026/10/30 10:02:20] ppocr INFO: The detected Image saved in C:/Users/emedi/OneDrive - Coventry University/PROJECT DOCUMENTS/MSC-VIN-YOLO_to_PADDLEOCR/results/experiments/EXP-VIN-DET-FT-002/test/det_results/VIN_2025-03-25-18-31-13_bmp.rf.0030c83425e908fff60370b7a48a4dd5.jpg
+[2026/10/30 10:02:20] ppocr INFO: infer_img: C:/Users/emedi/OneDrive - Coventry University/PROJECT DOCUMENTS/MSC-VIN-YOLO_to_PADDLEOCR/data/processed/paddleocr_vin/EXP-YOLO-PPOCR-CONVERT-001_20261028_132836_267609/detection/images/test\VIN_2025-03-25-18-53-51_bmp.rf.815e7dc55677e8ab547cf94083790ad7.jpg
+[2026/10/30 10:02:20] ppocr INFO: The detected Image saved in C:/Users/emedi/OneDrive - Coventry University/PROJECT DOCUMENTS/MSC-VIN-YOLO_to_PADDLEOCR/results/experiments/EXP-VIN-DET-FT-002/test/det_results/VIN_2025-03-25-18-53-51_bmp.rf.815e7dc55677e8ab547cf94083790ad7.jpg
+[2026/10/30 10:02:20] ppocr INFO: infer_img: C:/Users/emedi/OneDrive - Coventry University/PROJECT DOCUMENTS/MSC-VIN-YOLO_to_PADDLEOCR/data/processed/paddleocr_vin/EXP-YOLO-PPOCR-CONVERT-001_20261028_132836_267609/detection/images/test\VIN_2025-03-25-19-05-38_bmp.rf.d099c9bfdd69c65578ce4c9e31543e20.jpg
+[2026/10/30 10:02:20] ppocr INFO: The detected Image saved in C:/Users/emedi/OneDrive - Coventry University/PROJECT DOCUMENTS/MSC-VIN-YOLO_to_PADDLEOCR/results/experiments/EXP-VIN-DET-FT-002/test/det_results/VIN_2025-03-25-19-05-38_bmp.rf.d099c9bfdd69c65578ce4c9e31543e20.jpg
+[2026/10/30 10:02:20] ppocr INFO: infer_img: C:/Users/emedi/OneDrive - Coventry University/PROJECT DOCUMENTS/MSC-VIN-YOLO_to_PADDLEOCR/data/processed/paddleocr_vin/EXP-YOLO-PPOCR-CONVERT-001_20261028_132836_267609/detection/images/test\VIN_2025-03-25-19-33-30_bmp.rf.6d562540b6ad7fe04c32b95e64285994.jpg
+[2026/10/30 10:02:20] ppocr INFO: The detected Image saved in C:/Users/emedi/OneDrive - Coventry University/PROJECT DOCUMENTS/MSC-VIN-YOLO_to_PADDLEOCR/results/experiments/EXP-VIN-DET-FT-002/test/det_results/VIN_2025-03-25-19-33-30_bmp.rf.6d562540b6ad7fe04c32b95e64285994.jpg
+[2026/10/30 10:02:20] ppocr INFO: infer_img: C:/Users/emedi/OneDrive - Coventry University/PROJECT DOCUMENTS/MSC-VIN-YOLO_to_PADDLEOCR/data/processed/paddleocr_vin/EXP-YOLO-PPOCR-CONVERT-001_20261028_132836_267609/detection/images/test\VIN_2025-03-25-19-35-52_bmp.rf.2659af2f2bd670f0edc888229fe77e5a.jpg
+[2026/10/30 10:02:21] ppocr INFO: The detected Image saved in C:/Users/emedi/OneDrive - Coventry University/PROJECT DOCUMENTS/MSC-VIN-YOLO_to_PADDLEOCR/results/experiments/EXP-VIN-DET-FT-002/test/det_results/VIN_2025-03-25-19-35-52_bmp.rf.2659af2f2bd670f0edc888229fe77e5a.jpg
+[2026/10/30 10:02:21] ppocr INFO: infer_img: C:/Users/emedi/OneDrive - Coventry University/PROJECT DOCUMENTS/MSC-VIN-YOLO_to_PADDLEOCR/data/processed/paddleocr_vin/EXP-YOLO-PPOCR-CONVERT-001_20261028_132836_267609/detection/images/test\VIN_2025-03-25-19-53-40_bmp.rf.ad63cb596dcb27ca884112fe4feef04c.jpg
+[2026/10/30 10:02:21] ppocr INFO: The detected Image saved in C:/Users/emedi/OneDrive - Coventry University/PROJECT DOCUMENTS/MSC-VIN-YOLO_to_PADDLEOCR/results/experiments/EXP-VIN-DET-FT-002/test/det_results/VIN_2025-03-25-19-53-40_bmp.rf.ad63cb596dcb27ca884112fe4feef04c.jpg
+[2026/10/30 10:02:21] ppocr INFO: infer_img: C:/Users/emedi/OneDrive - Coventry University/PROJECT DOCUMENTS/MSC-VIN-YOLO_to_PADDLEOCR/data/processed/paddleocr_vin/EXP-YOLO-PPOCR-CONVERT-001_20261028_132836_267609/detection/images/test\VIN_2025-03-25-19-55-17_bmp.rf.4465ff9989d798555e1f916b478d575d.jpg
+[2026/10/30 10:02:21] ppocr INFO: The detected Image saved in C:/Users/emedi/OneDrive - Coventry University/PROJECT DOCUMENTS/MSC-VIN-YOLO_to_PADDLEOCR/results/experiments/EXP-VIN-DET-FT-002/test/det_results/VIN_2025-03-25-19-55-17_bmp.rf.4465ff9989d798555e1f916b478d575d.jpg
+[2026/10/30 10:02:21] ppocr INFO: infer_img: C:/Users/emedi/OneDrive - Coventry University/PROJECT DOCUMENTS/MSC-VIN-YOLO_to_PADDLEOCR/data/processed/paddleocr_vin/EXP-YOLO-PPOCR-CONVERT-001_20261028_132836_267609/detection/images/test\VIN_2025-03-25-20-06-06_bmp.rf.426c76d28a9792334849f005053521bc.jpg
+[2026/10/30 10:02:21] ppocr INFO: The detected Image saved in C:/Users/emedi/OneDrive - Coventry University/PROJECT DOCUMENTS/MSC-VIN-YOLO_to_PADDLEOCR/results/experiments/EXP-VIN-DET-FT-002/test/det_results/VIN_2025-03-25-20-06-06_bmp.rf.426c76d28a9792334849f005053521bc.jpg
+[2026/10/30 10:02:21] ppocr INFO: infer_img: C:/Users/emedi/OneDrive - Coventry University/PROJECT DOCUMENTS/MSC-VIN-YOLO_to_PADDLEOCR/data/processed/paddleocr_vin/EXP-YOLO-PPOCR-CONVERT-001_20261028_132836_267609/detection/images/test\VIN_2025-03-25-20-21-26_bmp.rf.7ddace9366ff8edbb68597bd20ba7c3c.jpg
+[2026/10/30 10:02:21] ppocr INFO: The detected Image saved in C:/Users/emedi/OneDrive - Coventry University/PROJECT DOCUMENTS/MSC-VIN-YOLO_to_PADDLEOCR/results/experiments/EXP-VIN-DET-FT-002/test/det_results/VIN_2025-03-25-20-21-26_bmp.rf.7ddace9366ff8edbb68597bd20ba7c3c.jpg
+[2026/10/30 10:02:21] ppocr INFO: infer_img: C:/Users/emedi/OneDrive - Coventry University/PROJECT DOCUMENTS/MSC-VIN-YOLO_to_PADDLEOCR/data/processed/paddleocr_vin/EXP-YOLO-PPOCR-CONVERT-001_20261028_132836_267609/detection/images/test\VIN_2025-03-25-21-19-57_bmp.rf.dfe10da96aed6143d5d4f8802f0e52ae.jpg
+[2026/10/30 10:02:22] ppocr INFO: The detected Image saved in C:/Users/emedi/OneDrive - Coventry University/PROJECT DOCUMENTS/MSC-VIN-YOLO_to_PADDLEOCR/results/experiments/EXP-VIN-DET-FT-002/test/det_results/VIN_2025-03-25-21-19-57_bmp.rf.dfe10da96aed6143d5d4f8802f0e52ae.jpg
+[2026/10/30 10:02:22] ppocr INFO: infer_img: C:/Users/emedi/OneDrive - Coventry University/PROJECT DOCUMENTS/MSC-VIN-YOLO_to_PADDLEOCR/data/processed/paddleocr_vin/EXP-YOLO-PPOCR-CONVERT-001_20261028_132836_267609/detection/images/test\VIN_2025-03-25-21-20-42_bmp.rf.f213a7b2be88e50bb4429f145749e003.jpg
+[2026/10/30 10:02:22] ppocr INFO: The detected Image saved in C:/Users/emedi/OneDrive - Coventry University/PROJECT DOCUMENTS/MSC-VIN-YOLO_to_PADDLEOCR/results/experiments/EXP-VIN-DET-FT-002/test/det_results/VIN_2025-03-25-21-20-42_bmp.rf.f213a7b2be88e50bb4429f145749e003.jpg
+[2026/10/30 10:02:22] ppocr INFO: infer_img: C:/Users/emedi/OneDrive - Coventry University/PROJECT DOCUMENTS/MSC-VIN-YOLO_to_PADDLEOCR/data/processed/paddleocr_vin/EXP-YOLO-PPOCR-CONVERT-001_20261028_132836_267609/detection/images/test\VIN_2025-03-25-22-04-39_bmp.rf.e9a8b9f69c64a96110474355d824b999.jpg
+[2026/10/30 10:02:22] ppocr INFO: The detected Image saved in C:/Users/emedi/OneDrive - Coventry University/PROJECT DOCUMENTS/MSC-VIN-YOLO_to_PADDLEOCR/results/experiments/EXP-VIN-DET-FT-002/test/det_results/VIN_2025-03-25-22-04-39_bmp.rf.e9a8b9f69c64a96110474355d824b999.jpg
+[2026/10/30 10:02:22] ppocr INFO: infer_img: C:/Users/emedi/OneDrive - Coventry University/PROJECT DOCUMENTS/MSC-VIN-YOLO_to_PADDLEOCR/data/processed/paddleocr_vin/EXP-YOLO-PPOCR-CONVERT-001_20261028_132836_267609/detection/images/test\VIN_2025-03-25-22-10-07_bmp.rf.6a0e6336f92c1a1a7edef2ec8a8c44ab.jpg
+[2026/10/30 10:02:22] ppocr INFO: The detected Image saved in C:/Users/emedi/OneDrive - Coventry University/PROJECT DOCUMENTS/MSC-VIN-YOLO_to_PADDLEOCR/results/experiments/EXP-VIN-DET-FT-002/test/det_results/VIN_2025-03-25-22-10-07_bmp.rf.6a0e6336f92c1a1a7edef2ec8a8c44ab.jpg
+[2026/10/30 10:02:22] ppocr INFO: infer_img: C:/Users/emedi/OneDrive - Coventry University/PROJECT DOCUMENTS/MSC-VIN-YOLO_to_PADDLEOCR/data/processed/paddleocr_vin/EXP-YOLO-PPOCR-CONVERT-001_20261028_132836_267609/detection/images/test\VIN_2025-03-25-22-26-12_bmp.rf.6c05c17d24b6c25c55c2933e7b8d763c.jpg
+[2026/10/30 10:02:22] ppocr INFO: The detected Image saved in C:/Users/emedi/OneDrive - Coventry University/PROJECT DOCUMENTS/MSC-VIN-YOLO_to_PADDLEOCR/results/experiments/EXP-VIN-DET-FT-002/test/det_results/VIN_2025-03-25-22-26-12_bmp.rf.6c05c17d24b6c25c55c2933e7b8d763c.jpg
+[2026/10/30 10:02:22] ppocr INFO: infer_img: C:/Users/emedi/OneDrive - Coventry University/PROJECT DOCUMENTS/MSC-VIN-YOLO_to_PADDLEOCR/data/processed/paddleocr_vin/EXP-YOLO-PPOCR-CONVERT-001_20261028_132836_267609/detection/images/test\VIN_2025-03-25-22-35-38_bmp.rf.2e94441d16fb69f18628af412afd2666.jpg
+[2026/10/30 10:02:23] ppocr INFO: The detected Image saved in C:/Users/emedi/OneDrive - Coventry University/PROJECT DOCUMENTS/MSC-VIN-YOLO_to_PADDLEOCR/results/experiments/EXP-VIN-DET-FT-002/test/det_results/VIN_2025-03-25-22-35-38_bmp.rf.2e94441d16fb69f18628af412afd2666.jpg
+[2026/10/30 10:02:23] ppocr INFO: infer_img: C:/Users/emedi/OneDrive - Coventry University/PROJECT DOCUMENTS/MSC-VIN-YOLO_to_PADDLEOCR/data/processed/paddleocr_vin/EXP-YOLO-PPOCR-CONVERT-001_20261028_132836_267609/detection/images/test\VIN_2025-03-25-22-47-45_bmp.rf.051130081caf0a2cf5dad58d026a78d8.jpg
+[2026/10/30 10:02:23] ppocr INFO: The detected Image saved in C:/Users/emedi/OneDrive - Coventry University/PROJECT DOCUMENTS/MSC-VIN-YOLO_to_PADDLEOCR/results/experiments/EXP-VIN-DET-FT-002/test/det_results/VIN_2025-03-25-22-47-45_bmp.rf.051130081caf0a2cf5dad58d026a78d8.jpg
+[2026/10/30 10:02:23] ppocr INFO: infer_img: C:/Users/emedi/OneDrive - Coventry University/PROJECT DOCUMENTS/MSC-VIN-YOLO_to_PADDLEOCR/data/processed/paddleocr_vin/EXP-YOLO-PPOCR-CONVERT-001_20261028_132836_267609/detection/images/test\VIN_2025-03-25-23-16-03_bmp.rf.2d5784795ee0f65cef8ba61d5267cbe8.jpg
+[2026/10/30 10:02:23] ppocr INFO: The detected Image saved in C:/Users/emedi/OneDrive - Coventry University/PROJECT DOCUMENTS/MSC-VIN-YOLO_to_PADDLEOCR/results/experiments/EXP-VIN-DET-FT-002/test/det_results/VIN_2025-03-25-23-16-03_bmp.rf.2d5784795ee0f65cef8ba61d5267cbe8.jpg
+[2026/10/30 10:02:23] ppocr INFO: infer_img: C:/Users/emedi/OneDrive - Coventry University/PROJECT DOCUMENTS/MSC-VIN-YOLO_to_PADDLEOCR/data/processed/paddleocr_vin/EXP-YOLO-PPOCR-CONVERT-001_20261028_132836_267609/detection/images/test\VIN_2025-03-25-23-22-16_bmp.rf.b10eca6b6d18da612e7670062699d35f.jpg
+[2026/10/30 10:02:23] ppocr INFO: The detected Image saved in C:/Users/emedi/OneDrive - Coventry University/PROJECT DOCUMENTS/MSC-VIN-YOLO_to_PADDLEOCR/results/experiments/EXP-VIN-DET-FT-002/test/det_results/VIN_2025-03-25-23-22-16_bmp.rf.b10eca6b6d18da612e7670062699d35f.jpg
+[2026/10/30 10:02:23] ppocr INFO: infer_img: C:/Users/emedi/OneDrive - Coventry University/PROJECT DOCUMENTS/MSC-VIN-YOLO_to_PADDLEOCR/data/processed/paddleocr_vin/EXP-YOLO-PPOCR-CONVERT-001_20261028_132836_267609/detection/images/test\VIN_2025-03-25-23-24-38_bmp.rf.c352825be640a7e747e601eb521d4d49.jpg
+[2026/10/30 10:02:23] ppocr INFO: The detected Image saved in C:/Users/emedi/OneDrive - Coventry University/PROJECT DOCUMENTS/MSC-VIN-YOLO_to_PADDLEOCR/results/experiments/EXP-VIN-DET-FT-002/test/det_results/VIN_2025-03-25-23-24-38_bmp.rf.c352825be640a7e747e601eb521d4d49.jpg
+[2026/10/30 10:02:23] ppocr INFO: infer_img: C:/Users/emedi/OneDrive - Coventry University/PROJECT DOCUMENTS/MSC-VIN-YOLO_to_PADDLEOCR/data/processed/paddleocr_vin/EXP-YOLO-PPOCR-CONVERT-001_20261028_132836_267609/detection/images/test\VIN_2025-03-25-23-26-08_bmp.rf.6114d19a62ba5b414cb974ac7095a783.jpg
+[2026/10/30 10:02:24] ppocr INFO: The detected Image saved in C:/Users/emedi/OneDrive - Coventry University/PROJECT DOCUMENTS/MSC-VIN-YOLO_to_PADDLEOCR/results/experiments/EXP-VIN-DET-FT-002/test/det_results/VIN_2025-03-25-23-26-08_bmp.rf.6114d19a62ba5b414cb974ac7095a783.jpg
+[2026/10/30 10:02:24] ppocr INFO: infer_img: C:/Users/emedi/OneDrive - Coventry University/PROJECT DOCUMENTS/MSC-VIN-YOLO_to_PADDLEOCR/data/processed/paddleocr_vin/EXP-YOLO-PPOCR-CONVERT-001_20261028_132836_267609/detection/images/test\VIN_2025-03-25-23-34-49_bmp.rf.a9ff4c998dd58e97dd05cd89ae577414.jpg
+[2026/10/30 10:02:24] ppocr INFO: The detected Image saved in C:/Users/emedi/OneDrive - Coventry University/PROJECT DOCUMENTS/MSC-VIN-YOLO_to_PADDLEOCR/results/experiments/EXP-VIN-DET-FT-002/test/det_results/VIN_2025-03-25-23-34-49_bmp.rf.a9ff4c998dd58e97dd05cd89ae577414.jpg
+[2026/10/30 10:02:24] ppocr INFO: infer_img: C:/Users/emedi/OneDrive - Coventry University/PROJECT DOCUMENTS/MSC-VIN-YOLO_to_PADDLEOCR/data/processed/paddleocr_vin/EXP-YOLO-PPOCR-CONVERT-001_20261028_132836_267609/detection/images/test\VIN_2025-03-25-23-43-11_bmp.rf.22206aa50c66679010cb124ec107a19a.jpg
+[2026/10/30 10:02:24] ppocr INFO: The detected Image saved in C:/Users/emedi/OneDrive - Coventry University/PROJECT DOCUMENTS/MSC-VIN-YOLO_to_PADDLEOCR/results/experiments/EXP-VIN-DET-FT-002/test/det_results/VIN_2025-03-25-23-43-11_bmp.rf.22206aa50c66679010cb124ec107a19a.jpg
+[2026/10/30 10:02:24] ppocr INFO: infer_img: C:/Users/emedi/OneDrive - Coventry University/PROJECT DOCUMENTS/MSC-VIN-YOLO_to_PADDLEOCR/data/processed/paddleocr_vin/EXP-YOLO-PPOCR-CONVERT-001_20261028_132836_267609/detection/images/test\VIN_2025_03_24-06_35_24_bmp.rf.01ee05e019d7ca839b06c0fd0856c15d.jpg
+[2026/10/30 10:02:24] ppocr INFO: The detected Image saved in C:/Users/emedi/OneDrive - Coventry University/PROJECT DOCUMENTS/MSC-VIN-YOLO_to_PADDLEOCR/results/experiments/EXP-VIN-DET-FT-002/test/det_results/VIN_2025_03_24-06_35_24_bmp.rf.01ee05e019d7ca839b06c0fd0856c15d.jpg
+[2026/10/30 10:02:24] ppocr INFO: infer_img: C:/Users/emedi/OneDrive - Coventry University/PROJECT DOCUMENTS/MSC-VIN-YOLO_to_PADDLEOCR/data/processed/paddleocr_vin/EXP-YOLO-PPOCR-CONVERT-001_20261028_132836_267609/detection/images/test\VIN_2025_03_24-06_49_14_bmp.rf.896296f738dc2abfde8225c65c25d384.jpg
+[2026/10/30 10:02:24] ppocr INFO: The detected Image saved in C:/Users/emedi/OneDrive - Coventry University/PROJECT DOCUMENTS/MSC-VIN-YOLO_to_PADDLEOCR/results/experiments/EXP-VIN-DET-FT-002/test/det_results/VIN_2025_03_24-06_49_14_bmp.rf.896296f738dc2abfde8225c65c25d384.jpg
+[2026/10/30 10:02:24] ppocr INFO: infer_img: C:/Users/emedi/OneDrive - Coventry University/PROJECT DOCUMENTS/MSC-VIN-YOLO_to_PADDLEOCR/data/processed/paddleocr_vin/EXP-YOLO-PPOCR-CONVERT-001_20261028_132836_267609/detection/images/test\VIN_2025_03_24-06_57_42_bmp.rf.3d9f1b0f8fbca58ff79a3491dccd3c5e.jpg
+[2026/10/30 10:02:25] ppocr INFO: The detected Image saved in C:/Users/emedi/OneDrive - Coventry University/PROJECT DOCUMENTS/MSC-VIN-YOLO_to_PADDLEOCR/results/experiments/EXP-VIN-DET-FT-002/test/det_results/VIN_2025_03_24-06_57_42_bmp.rf.3d9f1b0f8fbca58ff79a3491dccd3c5e.jpg
+[2026/10/30 10:02:25] ppocr INFO: infer_img: C:/Users/emedi/OneDrive - Coventry University/PROJECT DOCUMENTS/MSC-VIN-YOLO_to_PADDLEOCR/data/processed/paddleocr_vin/EXP-YOLO-PPOCR-CONVERT-001_20261028_132836_267609/detection/images/test\VIN_2025_03_24-07_06_17_bmp.rf.171827fe2d4557b6823b558ee13f4b3b.jpg
+[2026/10/30 10:02:25] ppocr INFO: The detected Image saved in C:/Users/emedi/OneDrive - Coventry University/PROJECT DOCUMENTS/MSC-VIN-YOLO_to_PADDLEOCR/results/experiments/EXP-VIN-DET-FT-002/test/det_results/VIN_2025_03_24-07_06_17_bmp.rf.171827fe2d4557b6823b558ee13f4b3b.jpg
+[2026/10/30 10:02:25] ppocr INFO: infer_img: C:/Users/emedi/OneDrive - Coventry University/PROJECT DOCUMENTS/MSC-VIN-YOLO_to_PADDLEOCR/data/processed/paddleocr_vin/EXP-YOLO-PPOCR-CONVERT-001_20261028_132836_267609/detection/images/test\VIN_2025_03_24-07_21_24_bmp.rf.2b942acab7c19a00b5ee382b6d65ae6d.jpg
+[2026/10/30 10:02:25] ppocr INFO: The detected Image saved in C:/Users/emedi/OneDrive - Coventry University/PROJECT DOCUMENTS/MSC-VIN-YOLO_to_PADDLEOCR/results/experiments/EXP-VIN-DET-FT-002/test/det_results/VIN_2025_03_24-07_21_24_bmp.rf.2b942acab7c19a00b5ee382b6d65ae6d.jpg
+[2026/10/30 10:02:25] ppocr INFO: infer_img: C:/Users/emedi/OneDrive - Coventry University/PROJECT DOCUMENTS/MSC-VIN-YOLO_to_PADDLEOCR/data/processed/paddleocr_vin/EXP-YOLO-PPOCR-CONVERT-001_20261028_132836_267609/detection/images/test\VIN_2025_03_24-07_32_58_bmp.rf.c593d3a700cee79970dcc04ca35679bf.jpg
+[2026/10/30 10:02:25] ppocr INFO: The detected Image saved in C:/Users/emedi/OneDrive - Coventry University/PROJECT DOCUMENTS/MSC-VIN-YOLO_to_PADDLEOCR/results/experiments/EXP-VIN-DET-FT-002/test/det_results/VIN_2025_03_24-07_32_58_bmp.rf.c593d3a700cee79970dcc04ca35679bf.jpg
+[2026/10/30 10:02:25] ppocr INFO: infer_img: C:/Users/emedi/OneDrive - Coventry University/PROJECT DOCUMENTS/MSC-VIN-YOLO_to_PADDLEOCR/data/processed/paddleocr_vin/EXP-YOLO-PPOCR-CONVERT-001_20261028_132836_267609/detection/images/test\VIN_2025_03_24-08_20_02_bmp.rf.37a22ddbd2495de4477971f44744c4bb.jpg
+[2026/10/30 10:02:26] ppocr INFO: The detected Image saved in C:/Users/emedi/OneDrive - Coventry University/PROJECT DOCUMENTS/MSC-VIN-YOLO_to_PADDLEOCR/results/experiments/EXP-VIN-DET-FT-002/test/det_results/VIN_2025_03_24-08_20_02_bmp.rf.37a22ddbd2495de4477971f44744c4bb.jpg
+[2026/10/30 10:02:26] ppocr INFO: infer_img: C:/Users/emedi/OneDrive - Coventry University/PROJECT DOCUMENTS/MSC-VIN-YOLO_to_PADDLEOCR/data/processed/paddleocr_vin/EXP-YOLO-PPOCR-CONVERT-001_20261028_132836_267609/detection/images/test\VIN_2025_03_24-08_26_41_bmp.rf.84391ecb762b126a75f0fe76fe6c7f6a.jpg
+[2026/10/30 10:02:26] ppocr INFO: The detected Image saved in C:/Users/emedi/OneDrive - Coventry University/PROJECT DOCUMENTS/MSC-VIN-YOLO_to_PADDLEOCR/results/experiments/EXP-VIN-DET-FT-002/test/det_results/VIN_2025_03_24-08_26_41_bmp.rf.84391ecb762b126a75f0fe76fe6c7f6a.jpg
+[2026/10/30 10:02:26] ppocr INFO: infer_img: C:/Users/emedi/OneDrive - Coventry University/PROJECT DOCUMENTS/MSC-VIN-YOLO_to_PADDLEOCR/data/processed/paddleocr_vin/EXP-YOLO-PPOCR-CONVERT-001_20261028_132836_267609/detection/images/test\VIN_2025_03_24-08_45_07_bmp.rf.dff38680f14c1d57fe2a4a983f0a8225.jpg
+[2026/10/30 10:02:26] ppocr INFO: The detected Image saved in C:/Users/emedi/OneDrive - Coventry University/PROJECT DOCUMENTS/MSC-VIN-YOLO_to_PADDLEOCR/results/experiments/EXP-VIN-DET-FT-002/test/det_results/VIN_2025_03_24-08_45_07_bmp.rf.dff38680f14c1d57fe2a4a983f0a8225.jpg
+[2026/10/30 10:02:26] ppocr INFO: infer_img: C:/Users/emedi/OneDrive - Coventry University/PROJECT DOCUMENTS/MSC-VIN-YOLO_to_PADDLEOCR/data/processed/paddleocr_vin/EXP-YOLO-PPOCR-CONVERT-001_20261028_132836_267609/detection/images/test\VIN_2025_03_24-08_48_46_bmp.rf.6a7a1f96b7e7b75671ea853366f9d351.jpg
+[2026/10/30 10:02:26] ppocr INFO: The detected Image saved in C:/Users/emedi/OneDrive - Coventry University/PROJECT DOCUMENTS/MSC-VIN-YOLO_to_PADDLEOCR/results/experiments/EXP-VIN-DET-FT-002/test/det_results/VIN_2025_03_24-08_48_46_bmp.rf.6a7a1f96b7e7b75671ea853366f9d351.jpg
+[2026/10/30 10:02:26] ppocr INFO: infer_img: C:/Users/emedi/OneDrive - Coventry University/PROJECT DOCUMENTS/MSC-VIN-YOLO_to_PADDLEOCR/data/processed/paddleocr_vin/EXP-YOLO-PPOCR-CONVERT-001_20261028_132836_267609/detection/images/test\VIN_2025_03_25-07_39_39_bmp.rf.fc325c75375adf423b524970f110c921.jpg
+[2026/10/30 10:02:26] ppocr INFO: The detected Image saved in C:/Users/emedi/OneDrive - Coventry University/PROJECT DOCUMENTS/MSC-VIN-YOLO_to_PADDLEOCR/results/experiments/EXP-VIN-DET-FT-002/test/det_results/VIN_2025_03_25-07_39_39_bmp.rf.fc325c75375adf423b524970f110c921.jpg
+[2026/10/30 10:02:26] ppocr INFO: infer_img: C:/Users/emedi/OneDrive - Coventry University/PROJECT DOCUMENTS/MSC-VIN-YOLO_to_PADDLEOCR/data/processed/paddleocr_vin/EXP-YOLO-PPOCR-CONVERT-001_20261028_132836_267609/detection/images/test\VIN_2025_03_25-08_32_56_bmp.rf.c560de05b18633cad6677da7dca1ef77.jpg
+[2026/10/30 10:02:27] ppocr INFO: The detected Image saved in C:/Users/emedi/OneDrive - Coventry University/PROJECT DOCUMENTS/MSC-VIN-YOLO_to_PADDLEOCR/results/experiments/EXP-VIN-DET-FT-002/test/det_results/VIN_2025_03_25-08_32_56_bmp.rf.c560de05b18633cad6677da7dca1ef77.jpg
+[2026/10/30 10:02:27] ppocr INFO: infer_img: C:/Users/emedi/OneDrive - Coventry University/PROJECT DOCUMENTS/MSC-VIN-YOLO_to_PADDLEOCR/data/processed/paddleocr_vin/EXP-YOLO-PPOCR-CONVERT-001_20261028_132836_267609/detection/images/test\VIN_2025_03_25-08_48_28_bmp.rf.16dc1d548cf7c9087af3bc6ad6d27b09.jpg
+[2026/10/30 10:02:27] ppocr INFO: The detected Image saved in C:/Users/emedi/OneDrive - Coventry University/PROJECT DOCUMENTS/MSC-VIN-YOLO_to_PADDLEOCR/results/experiments/EXP-VIN-DET-FT-002/test/det_results/VIN_2025_03_25-08_48_28_bmp.rf.16dc1d548cf7c9087af3bc6ad6d27b09.jpg
+[2026/10/30 10:02:27] ppocr INFO: infer_img: C:/Users/emedi/OneDrive - Coventry University/PROJECT DOCUMENTS/MSC-VIN-YOLO_to_PADDLEOCR/data/processed/paddleocr_vin/EXP-YOLO-PPOCR-CONVERT-001_20261028_132836_267609/detection/images/test\VIN_2025_03_25-13_38_07_bmp.rf.1e453a36c95af493570e6ea50c85e54a.jpg
+[2026/10/30 10:02:27] ppocr INFO: The detected Image saved in C:/Users/emedi/OneDrive - Coventry University/PROJECT DOCUMENTS/MSC-VIN-YOLO_to_PADDLEOCR/results/experiments/EXP-VIN-DET-FT-002/test/det_results/VIN_2025_03_25-13_38_07_bmp.rf.1e453a36c95af493570e6ea50c85e54a.jpg
+[2026/10/30 10:02:27] ppocr INFO: infer_img: C:/Users/emedi/OneDrive - Coventry University/PROJECT DOCUMENTS/MSC-VIN-YOLO_to_PADDLEOCR/data/processed/paddleocr_vin/EXP-YOLO-PPOCR-CONVERT-001_20261028_132836_267609/detection/images/test\VIN_2025_03_25-13_58_48_bmp.rf.a8854ce39a0b2aebb297677b022738be.jpg
+[2026/10/30 10:02:27] ppocr INFO: The detected Image saved in C:/Users/emedi/OneDrive - Coventry University/PROJECT DOCUMENTS/MSC-VIN-YOLO_to_PADDLEOCR/results/experiments/EXP-VIN-DET-FT-002/test/det_results/VIN_2025_03_25-13_58_48_bmp.rf.a8854ce39a0b2aebb297677b022738be.jpg
+[2026/10/30 10:02:27] ppocr INFO: infer_img: C:/Users/emedi/OneDrive - Coventry University/PROJECT DOCUMENTS/MSC-VIN-YOLO_to_PADDLEOCR/data/processed/paddleocr_vin/EXP-YOLO-PPOCR-CONVERT-001_20261028_132836_267609/detection/images/test\VIN_2025_03_25-14_08_01_bmp.rf.a5e256759b147feb4ff234e85a221313.jpg
+[2026/10/30 10:02:27] ppocr INFO: The detected Image saved in C:/Users/emedi/OneDrive - Coventry University/PROJECT DOCUMENTS/MSC-VIN-YOLO_to_PADDLEOCR/results/experiments/EXP-VIN-DET-FT-002/test/det_results/VIN_2025_03_25-14_08_01_bmp.rf.a5e256759b147feb4ff234e85a221313.jpg
+[2026/10/30 10:02:27] ppocr INFO: infer_img: C:/Users/emedi/OneDrive - Coventry University/PROJECT DOCUMENTS/MSC-VIN-YOLO_to_PADDLEOCR/data/processed/paddleocr_vin/EXP-YOLO-PPOCR-CONVERT-001_20261028_132836_267609/detection/images/test\VIN_2025_03_25-14_26_41_bmp.rf.bb83df63d40770bd393fe30f63ba33e9.jpg
+[2026/10/30 10:02:28] ppocr INFO: The detected Image saved in C:/Users/emedi/OneDrive - Coventry University/PROJECT DOCUMENTS/MSC-VIN-YOLO_to_PADDLEOCR/results/experiments/EXP-VIN-DET-FT-002/test/det_results/VIN_2025_03_25-14_26_41_bmp.rf.bb83df63d40770bd393fe30f63ba33e9.jpg
+[2026/10/30 10:02:28] ppocr INFO: success!
+[2026/10/30 10:02:28] ppocr INFO: ========================================
+[2026/10/30 10:02:28] ppocr INFO: VIN DETECTION INFERENCE COMPLETED
+[2026/10/30 10:02:28] ppocr INFO: Experiment: EXP-VIN-DET-FT-002
+[2026/10/30 10:02:28] ppocr INFO: Horizontal padding per side: 10.0%
+[2026/10/30 10:02:28] ppocr INFO: Vertical padding per side: 30.0%
+[2026/10/30 10:02:28] ppocr INFO: Original and expanded coordinates saved.
+[2026/10/30 10:02:28] ppocr INFO: ========================================

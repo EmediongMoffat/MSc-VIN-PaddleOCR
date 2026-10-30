@@ -25,3 +25,5 @@ PaddleOCR/
 output/
 runs/
 *.tmp
+# Generated experiment images and crops
+results/**/*.jpg

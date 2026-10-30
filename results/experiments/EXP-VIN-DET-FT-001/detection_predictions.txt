@@ -1,0 +1,1 @@
+C:/Users/emedi/OneDrive - Coventry University/PROJECT DOCUMENTS/MSC-VIN-YOLO_to_PADDLEOCR/results/experiments/EXP-VIN-DET-FT-001/vin_crop.jpg	[]

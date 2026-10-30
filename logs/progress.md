@@ -21,3 +21,4 @@
 
 ### Research status
 No VIN OCR training has started. No VIN recognition metrics have been measured.
+
