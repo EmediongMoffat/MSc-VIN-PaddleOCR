@@ -1,58 +1,75 @@
-PROJECT: AI-Based OCR for VIN Reading
-DATE: 2026-10-28
-PYTHON:
-Python 3.12.10
+PROJECT: AI-Based OCR for Vehicle Identification Number (VIN) Reading
+PROJECT PARTNER: Oxford Vision and Sensor Technology (OVST) Ltd
+ENVIRONMENT RECORD: 30 October 2026
 
-PADDLEPADDLE GPU PACKAGE:
-Name: paddlepaddle-gpu
-Version: 3.3.0
-Summary: Parallel Distributed Deep Learning
-Home-page: https://www.paddlepaddle.org.cn/
-Author: 
-Author-email: Paddle-better@baidu.com
-License: Apache Software License
-Location: C:\Users\emedi\OneDrive - Coventry University\PROJECT DOCUMENTS\MSC-VIN-YOLO_to_PADDLEOCR\venv\Lib\site-packages
-Requires: httpx, networkx, numpy, nvidia-cublas, nvidia-cuda-runtime, nvidia-cudnn-cu13, nvidia-cufft, nvidia-curand, nvidia-cusolver, nvidia-cusparse, opt-einsum, Pillow, protobuf, safetensors, setuptools, typing-extensions
-Required-by: 
+1. SOFTWARE ENVIRONMENT
+Python: 3.12.10 (64-bit)
+PaddlePaddle GPU: 3.3.0
+PaddleOCR: 3.3.0
+PaddleX: 3.3.13
+NumPy: 2.4.1
+OpenCV: 5.0.0.93
 
-PADDLEOCR GIT COMMIT:
-dab3fe35379033fdcb2d0e9572fac0b36c9a9ebf
+2. HARDWARE ENVIRONMENT
+GPU: NVIDIA GeForce RTX 4050
+GPU memory: 6141 MiB
+GPU count: 1
+Paddle device: gpu:0
+NVIDIA driver: 617.14
+CUDA UMD version: 13.4
+GPU verification: PASSED
 
-GPU AND DRIVER:
-Wed Oct 28 12:23:09 2026       
-+-----------------------------------------------------------------------------------------+
-| NVIDIA-SMI 617.14                 KMD Version: 617.14        CUDA UMD Version: 13.4     |
-+-----------------------------------------+------------------------+----------------------+
-| GPU  Name                  Driver-Model | Bus-Id          Disp.A | Volatile Uncorr. ECC |
-| Fan  Temp   Perf          Pwr:Usage/Cap |           Memory-Usage | GPU-Util  Compute M. |
-|                                         |                        |               MIG M. |
-|=========================================+========================+======================|
-|   0  NVIDIA GeForce RTX 4050 ...  WDDM  |   00000000:01:00.0 Off |                  N/A |
-| N/A   46C    P0             16W /  140W |       0MiB /   6141MiB |      0%      Default |
-|                                         |                        |                  N/A |
-+-----------------------------------------+------------------------+----------------------+
+3. SOURCE CODE
+Cloned PaddleOCR repository commit:
+51e236d4715c3b8227a62716d5af4d3a903344f1
 
-+-----------------------------------------------------------------------------------------+
-| Processes:                                                                              |
-|  GPU   GI   CI              PID   Type   Process name                        GPU Memory |
-|        ID   ID                                                               Usage      |
-|=========================================================================================|
-|  No running processes found                                                             |
-+-----------------------------------------------------------------------------------------+
+4. DEPENDENCY RECORDS
+Direct dependencies: requirements.txt
+Complete installed package list: requirements-lock.txt
 
+5. COMPLETED VIN OCR EXPERIMENTS
 
-### Environment setup milestone — 28 October 2026
+EXP-VIN-DET-FT-002:
+PP-OCRv5 Mobile DB text detector fine-tuning.
+Training epochs: 200
+Training samples: 460
+Validation samples: 101
+Test samples: 51
+Test detection precision: 1.0000
+Test detection recall: 1.0000
+Test detection HMean: 1.0000
 
-- Python: 3.12.10
-- PaddlePaddle GPU: 3.3.0
-- GPU: NVIDIA GeForce RTX 4050, 6 GB VRAM
-- NVIDIA driver: 617.14
-- PaddleOCR Git commit: `dab3fe35379033fdcb2d0e9572fac0b36c9a9ebf`
-- GPU verification: PASSED
-- Matrix multiplication on `gpu:0`: PASSED
-- CUDA DLL registration: automatic setup configured using `sitecustomize.py`; final `paddle.utils.run_check()` passed.
-- VIN dataset preparation: pending
-- VIN OCR training: not started
-- OCR performance metrics: not measured
+EXP-VIN-REC-FT-001:
+PP-OCRv5 Mobile recognition fine-tuning.
+Training epochs: 200
+Training samples: 460
+Validation samples: 101
+Test samples: 51
+Independent test exact-string accuracy: 98.0392%
+Character accuracy: 99.8847%
+Character Error Rate: 0.1153%
 
-Note: The automatic DLL setup was tested in the current virtual environment. It must also be checked when launching the actual OCR training scripts.
+EXP-VIN-COMBINED-001:
+End-to-end detection and recognition pipeline.
+Test images: 51
+Exact-string accuracy: 96.0784%
+Character accuracy: 99.7693%
+Character Error Rate: 0.2307%
+Average end-to-end latency: 63.2 ms/image
+Throughput: 15.82 images/second
+Pipeline detection failures: 0
+
+6. REPOSITORY AND REPRODUCIBILITY
+Project source code maintained in Git.
+Experiment configurations and evaluation outputs retained.
+Dataset files, virtual environment, model checkpoints and cloned PaddleOCR source excluded from the project repository.
+Full dependency lock file generated from the active virtual environment.
+
+7. REMAINING RESEARCH WORK
+- Validate dataset split integrity and check for duplicates or leakage.
+- Complete GLM-OCR reference benchmark.
+- Compare OCR approaches on the same held-out test set.
+- Complete controlled robustness and efficiency experiments.
+- Measure model size and peak GPU memory.
+- Investigate deployment and local inference demonstration.
+- Complete experiment documentation and final thesis analysis.
