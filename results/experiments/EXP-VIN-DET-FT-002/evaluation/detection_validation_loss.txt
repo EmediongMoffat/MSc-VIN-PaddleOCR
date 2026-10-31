@@ -1,0 +1,11 @@
+EXP-VIN-DET-FT-002 Validation Loss
+Checkpoint: C:\Users\emedi\OneDrive - Coventry University\PROJECT DOCUMENTS\MSC-VIN-YOLO_to_PADDLEOCR\checkpoints\EXP-VIN-DET-FT-002\best_accuracy.pdparams
+Validation samples: 101
+Validation batches: 101
+Device: gpu:0
+
+loss: 6.94994208
+loss_shrink_maps: 4.66240800
+loss_threshold_maps: 1.35387766
+loss_binary_maps: 0.93365642
+loss_cbn: 0.00000000

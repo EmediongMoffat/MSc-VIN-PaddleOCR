@@ -1,0 +1,34 @@
+==== EXP-VIN-COMBINED-001 - Full pipeline (51 images) ====
+
+IMAGE-LEVEL METRICS
+Correct VINs: 49
+Failed VINs: 2
+Exact-string accuracy: 96.0784%
+
+CHARACTER-LEVEL METRICS
+Total ground-truth characters: 867
+Correct aligned characters: 866
+Character accuracy: 99.8847%
+Total edit operations: 2
+CER: 0.002307
+CER (%): 0.2307%
+
+CHARACTER F1
+F1 (micro): 0.9988
+F1 (macro): 0.9991
+
+NORMALISATION
+Uppercase; spaces removed; leading/trailing whitespace stripped.
+
+FAILURE ANALYSIS
+Number of failed VINs: 2
+Failure CSV: ocr_failures.csv
+
+INFERENCE TIMING
+Mean latency: 68.642 ms/image
+Throughput: 14.568 images/second
+Hardware: NVIDIA GeForce RTX 4050, batch 1
+
+INDIVIDUAL FAILURES
+FAIL: GT=5J6RS6H82SL039117 PRED=5J6RS6H82SL03917 edits=1 image=VIN_2025_03_24-07_06_17_bmp.rf.171827fe2d4557b6823b558ee13f4b3b.jpg
+FAIL: GT=5J8YE1H06SL803400 PRED=5J8YE1H06SL8033400 edits=1 image=VIN_2025_03_25-13_38_07_bmp.rf.1e453a36c95af493570e6ea50c85e54a.jpg

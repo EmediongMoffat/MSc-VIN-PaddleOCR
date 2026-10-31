@@ -1,0 +1,31 @@
+==== EXP-VIN-REC-FT-001 - Recognition only (51 images) ====
+
+IMAGE-LEVEL METRICS
+Correct VINs: 50
+Failed VINs: 1
+Exact-string accuracy: 98.0392%
+
+CHARACTER-LEVEL METRICS
+Total ground-truth characters: 867
+Correct aligned characters: 866
+Character accuracy: 99.8847%
+Total edit operations: 1
+CER: 0.001153
+CER (%): 0.1153%
+
+CHARACTER F1
+F1 (micro): 0.9994
+F1 (macro): 0.9994
+
+NORMALISATION
+Uppercase; spaces removed; leading/trailing whitespace stripped.
+
+FAILURE ANALYSIS
+Number of failed VINs: 1
+Failure CSV: ocr_failures.csv
+
+INFERENCE TIMING
+Not available in the source CSV.
+
+INDIVIDUAL FAILURES
+FAIL: GT=5J6RS6H82SL039117 PRED=5J6RS6H82SL03917 edits=1 image=VIN_2025_03_24-07_06_17_bmp.rf.171827fe2d4557b6823b558ee13f4b3b_detcrop.jpg

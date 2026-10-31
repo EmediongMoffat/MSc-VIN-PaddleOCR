@@ -1,0 +1,9 @@
+EXP-VIN-REC-FT-001 Validation Loss
+Checkpoint: C:\Users\emedi\OneDrive - Coventry University\PROJECT DOCUMENTS\MSC-VIN-YOLO_to_PADDLEOCR\checkpoints\EXP-VIN-REC-FT-001\best_accuracy.pdparams
+Validation samples: 101
+Validation batches: 101
+Device: gpu:0
+
+CTCLoss: 0.00557566
+NRTRLoss: 0.68687227
+loss: 0.69244792
