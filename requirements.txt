@@ -1,8 +1,17 @@
 # AI-Based VIN OCR - Direct dependencies
-# Python 3.12.10
+# Python 3.12.10 | Windows 11
+# GPU: NVIDIA GeForce RTX 4050 Laptop GPU (6141 MiB)
+# PaddlePaddle GPU CUDA build: 13.0 (cu130)
+# Repository: https://github.com/EmediongMoffat/MSc-VIN-PaddleOCR/tree/vin-ocr-project
+# Commit: 71999d5
+
 --extra-index-url https://www.paddlepaddle.org.cn/packages/stable/cu130/
+
 paddlepaddle-gpu==3.3.0
 paddleocr==3.3.0
 paddlex==3.3.13
 numpy==2.4.1
 opencv-python==5.0.0.93
+rapidfuzz==3.14.6
+scikit-learn==1.9.1
+pandas==3.1.0

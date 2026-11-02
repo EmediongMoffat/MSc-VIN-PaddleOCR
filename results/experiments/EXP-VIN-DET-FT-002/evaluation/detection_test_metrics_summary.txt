@@ -1,0 +1,31 @@
+EXP-VIN-DET-FT-002
+HELD-OUT TEST SET DETECTION EVALUATION
+=============================================
+Ground-truth images: 51
+Prediction images: 51
+Images evaluated: 51
+Total ground-truth boxes: 51
+Total predicted boxes: 51
+
+IOU THRESHOLD: 0.50
+True Positives: 51
+False Positives: 0
+False Negatives: 0
+Precision: 1.000000 (100.00%)
+Recall: 1.000000 (100.00%)
+F1 Score: 1.000000 (100.00%)
+
+IOU THRESHOLD: 0.75
+True Positives: 28
+False Positives: 23
+False Negatives: 23
+Precision: 0.549020 (54.90%)
+Recall: 0.549020 (54.90%)
+F1 Score: 0.549020 (54.90%)
+
+Mean best-box IoU: 0.747653
+
+Matching uses polygon IoU.
+Predicted original_points are evaluated.
+Expanded crop points are not used for detection scoring.
+No confidence scores were available in the prediction file.

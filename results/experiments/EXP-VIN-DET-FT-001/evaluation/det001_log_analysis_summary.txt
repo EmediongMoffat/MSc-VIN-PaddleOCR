@@ -1,0 +1,23 @@
+EXP-VIN-DET-FT-001 LOG ANALYSIS
+=============================================
+Training log: train.log
+Training records extracted: 284
+Validation evaluations extracted: 18
+Best metric records: 19
+EastRandomCrop TypeErrors recorded: 1765
+First recorded epoch: 2
+Last recorded epoch: 500
+Last recorded training loss: 0.474355
+Maximum reserved GPU memory: 7265 MB
+Maximum allocated GPU memory: 5325 MB
+
+BEST RECORDED VALIDATION RESULT
+Best epoch: 290
+Precision: 0.060150
+Recall: 0.160000
+H-mean: 0.087432
+FPS: 0.147214
+
+Note: Training loss values are recorded log steps,
+not calculated epoch-average losses.
+Validation metrics are not held-out test metrics.

@@ -1,109 +1,30 @@
-# AI-Based OCR for Vehicle Identification Numbers (VINs)
+# MSc VIN OCR Project
 
-## 1. Project objective
+**Project:** AI-Based OCR for Vehicle Identification Number (VIN) Reading  
+**Research partner:** Oxford Vision and Sensor Technology (OVST) Ltd  
+**Framework:** PaddleOCR / PaddlePaddle  
+**Python:** 3.12.10  
+**GPU:** NVIDIA GeForce RTX 4050 Laptop GPU
 
-This project investigates optical character recognition for extracting Vehicle Identification Numbers (VINs) from images. It evaluates recognition accuracy, robustness, inference speed, model size and computational requirements.
+## Project objective
+Develop and evaluate an accurate, efficient VIN detection and recognition pipeline using deep learning.
 
-The intended output is a complete VIN string. Evaluation will distinguish character-level performance from exact-string accuracy.
+## Main experiments
+- `EXP-VIN-DET-FT-001` – Initial VIN detection fine-tuning.
+- `EXP-VIN-DET-FT-002` – Improved VIN detection fine-tuning.
+- `EXP-VIN-REC-FT-001` – VIN recognition fine-tuning.
+- `EXP-VIN-COMBINED-001` – Combined detection and recognition evaluation.
 
-## 2. Research approach
+## Project structure
+- `configs/` – Experiment configurations.
+- `scripts/` – Training, inference and evaluation scripts.
+- `data/` – Dataset files and processed data.
+- `checkpoints/` – Model checkpoints.
+- `results/experiments/` – Experiment results and reports.
+- `logs/` – Training and execution logs.
+- `PaddleOCR/` – Cloned PaddleOCR repository.
 
-1. Verify the development environment.
-2. Identify and document a suitable VIN dataset.
-3. Inspect labels and establish reproducible train, validation and test splits.
-4. Reproduce an established OCR baseline.
-5. Evaluate detection and recognition separately where applicable.
-6. Record errors and investigate difficult images.
-7. Conduct controlled experiments, changing one major variable at a time.
-8. Compare recognition performance and computational cost.
-9. Prepare reproducible inference and evaluation scripts.
+## Reproducibility
+Experiment configurations, dataset splits, software versions, model checkpoints and evaluation outputs are recorded separately. The held-out test set is reserved for final evaluation.
 
-## 3. Development environment
-
-- Operating system: Windows
-- Python: 3.12.10
-- PaddlePaddle GPU: 3.3.0
-- GPU: NVIDIA GeForce RTX 4050, approximately 6 GB VRAM
-- NVIDIA driver: 617.14
-- OCR framework repository: PaddleOCR
-- Recorded PaddleOCR commit: `dab3fe35379033fdcb2d0e9572fac0b36c9a9ebf`
-- Virtual environment: `venv`
-
-See `environment.txt` and `requirements-lock.txt` for the recorded environment.
-
-## 4. Repository layout
-
-- `PaddleOCR/`: cloned upstream PaddleOCR repository
-- `data/raw/`: original datasets
-- `data/processed/`: derived images and annotations
-- `data/splits/`: dataset split manifests
-- `configs/`: experiment configurations
-- `src/`: project-specific code
-- `scripts/`: setup and reusable commands
-- `results/`: predictions, evaluation outputs and plots
-- `logs/`: progress and experiment records
-- `models/`: checkpoints and exported models
-
-## 5. Dataset governance
-
-For each dataset, record:
-
-- Name, source URL and version
-- Licence and usage permissions
-- Image and annotation formats
-- Number of samples and split counts
-- Label quality and known limitations
-- Preprocessing and duplicate checks
-
-Keep training, validation and test data separate. Do not use the test set to tune model parameters.
-
-## 6. Evaluation
-
-Subject to the task and available annotations, record:
-
-- Exact VIN accuracy
-- Character accuracy
-- Character Error Rate (CER)
-- String Error Rate
-- Detection precision, recall and F1 where detection annotations are available
-- Training and inference time
-- Model size
-- Hardware and memory usage
-- Failure cases and image conditions
-
-Metrics that cannot be measured or do not apply to the experiment will be marked accordingly, not recorded as zero.
-
-## 7. Experiment reproducibility
-
-Every experiment should have a unique ID and a record of:
-
-- Research question and hypothesis
-- Dataset version and split
-- Model architecture and pretrained weights
-- Configuration and random seed
-- Software versions and hardware
-- Exact training and evaluation commands
-- Results, runtime and errors
-- Git commit and output-file locations
-- Interpretation and limitations
-
-Raw predictions and evaluation outputs should be retained so reported metrics can be reproduced.
-
-## 8. Current status
-
-- [x] Python virtual environment created
-- [x] PaddlePaddle GPU installed
-- [x] GPU verification passed
-- [x] Environment report created
-- [x] Package snapshot created
-- [ ] Dataset selected and verified
-- [ ] Dataset tracking record completed
-- [ ] Baseline configuration prepared
-- [ ] First OCR training experiment started
-- [ ] Baseline evaluation completed
-
-## 9. Setup notes
-
-The upstream PaddleOCR training dependencies are managed in `PaddleOCR/requirements.txt`. PaddlePaddle GPU was installed separately.
-
-The project-level environment record and package snapshot are `environment.txt` and `requirements-lock.txt`. Update the records whenever the environment changes materially.
+**Important:** Do not overwrite original experiment configurations or use test results to tune models.

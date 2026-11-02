@@ -1,0 +1,12 @@
+EXP-VIN-DET-FT-001 Post-hoc Validation Loss
+Checkpoint: C:\Users\emedi\OneDrive - Coventry University\PROJECT DOCUMENTS\MSC-VIN-YOLO_to_PADDLEOCR\checkpoints\EXP-VIN-DET-FT-001\best_accuracy.pdparams
+Checkpoint epoch: 290 (best recorded validation epoch)
+Validation samples: 101
+Validation batches: 101
+Device: gpu:0
+
+loss: 4.60052236
+loss_shrink_maps: 2.94090317
+loss_threshold_maps: 1.08860000
+loss_binary_maps: 0.57101919
+loss_cbn: 0.00000000
