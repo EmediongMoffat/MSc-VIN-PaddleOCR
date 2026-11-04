@@ -1,0 +1,5 @@
+rec_test\sample\word_1.png	Please
+rec_test\sample\word_2.png	lower
+rec_test\sample\word_3.png	your
+rec_test\sample\word_4.png	volume
+rec_test\sample\word_5.png	when

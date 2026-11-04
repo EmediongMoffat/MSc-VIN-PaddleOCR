@@ -1,0 +1,13 @@
+venv/
+__pycache__/
+*.pyc
+.paddlex/
+*.log
+
+# PaddleX downloaded models and cache
+.paddlex/
+**/.paddlex/
+
+/train_data/ic15_data/
+PaddleOCR/.venv/
+PaddleOCR/
