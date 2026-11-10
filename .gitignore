@@ -1,0 +1,61 @@
+
+# ==========================================
+# PYTHON VIRTUAL ENVIRONMENTS
+# ==========================================
+venv/
+.venv/
+env/
+
+# ==========================================
+# ORIGINAL CLONED PADDLEOCR REPOSITORY
+# ==========================================
+/PaddleOCR/
+
+# ==========================================
+# DATASETS AND TRAINING DATA
+# ==========================================
+/dataset/
+/data/
+/recognition_data/
+/results/detection_images/
+/results/evaluation/EXP-E2E-ICDAR15-002/complete_metrics/failed_image_examples/
+/results/evaluation/EXP-E2E-ICDAR15-002/paddle_pred/
+/results/evaluation/EXP-E2E-ICDAR15-002/paddle_gt/
+/results/system/
+# ==========================================
+# MODEL FILES AND CHECKPOINTS
+# ==========================================
+/models/
+*.pdparams
+*.pdopt
+*.pdmodel
+*.pth
+*.pt
+*.onnx
+*.safetensors
+*.ckpt
+
+# ==========================================
+# PYTHON CACHE
+# ==========================================
+__pycache__/
+*.py[cod]
+.pytest_cache/
+
+# ==========================================
+# IDE AND EDITOR
+# ==========================================
+.vscode/
+
+# ==========================================
+# SYSTEM FILES
+# ==========================================
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# ==========================================
+# TEMPORARY FILES
+# ==========================================
+*.tmp
+*.temp

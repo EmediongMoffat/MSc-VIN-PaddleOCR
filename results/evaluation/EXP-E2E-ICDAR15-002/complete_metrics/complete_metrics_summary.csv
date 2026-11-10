@@ -1,0 +1,38 @@
+﻿Metric,Value
+Number of images,500
+Detection TP,1648
+Detection FP,492
+Detection FN,417
+Detection TN,N/A - not defined for object detection
+Detection precision (%),77.00934579439253
+Detection recall (%),79.80629539951573
+Detection F1 (%),78.38287752675387
+Eligible GT strings,2065
+Correct strings,1096
+Failed GT strings,969
+Matched regions,1648
+Exact string accuracy overall (%),53.07506053268766
+Exact string accuracy matched-only (%),66.50485436893204
+Matched-region string error rate (%),33.49514563106796
+Overall string error rate (%),46.92493946731235
+Substitutions,641
+Deletions,2346
+Insertions,2439
+Total GT characters,11025
+Matched-only CER (%),12.779446112779446
+Overall CER (%),49.21541950113379
+Overall character accuracy (%),50.784580498866205
+Exact text hits,1096
+dt_count,2140
+gt_count,2065
+Official-style precision (%),51.214953271028044
+Official-style recall (%),53.07506053268766
+Official-style F1 (%),52.12841854934602
+Total edit distance,5426
+Timing source,User-supplied total inference time
+Images timed,500
+Total inference seconds,59.968127
+Mean ms per image,119.936254
+Median ms per image,N/A
+P95 ms per image,N/A
+Images per second,8.337762491731649

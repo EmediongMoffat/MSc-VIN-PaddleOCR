@@ -1,0 +1,49 @@
+# EXP-REC-ICDAR15-001 — PP-OCRv6-Medium Recognition
+
+## Experiment
+- Dataset: ICDAR2015
+- Task: Text recognition using ground-truth-derived text crops
+- Architecture: SVTR_LCNet
+- Backbone: PPLCNetV4 (Medium)
+- Framework: PaddlePaddle 3.3.0
+- Device: NVIDIA GPU (Compute Capability 8.9)
+- Training epochs: 100
+- Selected checkpoint: best_accuracy
+- Best checkpoint epoch: 96
+- Training resumed from epoch 20
+
+## Dataset preparation
+- Training scenes: 800
+- Training recognition crops: 3,581
+- Validation scenes: 200
+- Validation recognition crops: 867
+- Test scenes: 500
+- Test recognition crops: 2,065
+- Test unknown/empty labels skipped: 3,153
+- Test invalid regions or failed writes: 12
+- Test missing/unreadable images: 0
+
+## Evaluation results
+
+| Metric | Validation | Test |
+|---|---:|---:|
+| Exact recognition accuracy | 70.9635% | 67.4805% |
+| Normalised edit distance | 87.6034% | 86.2582% |
+| PaddleOCR-reported evaluation FPS | 232.6123 | 277.2001 |
+
+## Interpretation
+Test exact recognition accuracy was 3.483 percentage points lower than validation accuracy. The test normalised edit distance was 1.345 percentage points lower than validation.
+
+The results measure recognition on ground-truth-derived text crops. They do not represent end-to-end text detection and recognition performance.
+
+The reported FPS values are PaddleOCR evaluation metrics and should not be assumed to represent end-to-end pipeline throughput without a separate, consistent timing benchmark.
+
+## Environment note
+The evaluation log warned that the installed PaddlePaddle build uses cuDNN 9.9 while the machine has cuDNN 9.5. This compatibility warning should be investigated before treating timing results as definitive.
+
+## Reproducibility
+Configuration: configs/PP-OCRv6_medium_rec_icdar2015.yml  
+Checkpoint prefix: models/rec_trained/PP-OCRv6_medium_rec_icdar2015/best_accuracy  
+Test labels: recognition_data/test_list.txt  
+Validation labels: recognition_data/val_list.txt  
+Training log and evaluation logs should be retained with the experiment record.

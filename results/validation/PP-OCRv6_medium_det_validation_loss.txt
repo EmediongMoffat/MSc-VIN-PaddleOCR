@@ -1,0 +1,15 @@
+PP-OCRv6 MEDIUM TEXT DETECTION
+POST-TRAINING VALIDATION LOSS
+============================================================
+Experiment: EXP-DET-ICDAR15-001
+Checkpoint: best_accuracy
+Checkpoint epoch: 84 (best validation epoch)
+Checkpoint file: C:\Users\emedi\OneDrive - Coventry University\PROJECT DOCUMENTS\MSC-ICDAR2015-PaddleOCR-CPU-\models\det_trained\PP-OCRv6_medium_det\best_accuracy.pdparams
+Validation labels: ../data/raw/det_val_200_labels.txt
+Images evaluated: 200
+Loss function: DBLoss
+Main loss: DiceFocalLoss
+Average validation loss: 9.87750676
+Validation preprocessing: DetResizeForTest, MakeBorderMap and MakeShrinkMap; no random training augmentation.
+Model weights updated: No
+Gradient calculation: Disabled

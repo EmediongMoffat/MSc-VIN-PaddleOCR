@@ -1,0 +1,11 @@
+ICDAR2015 detector inference timing
+Date: 2026-10-24T01:48:14
+Source log: C:\Users\emedi\OneDrive - Coventry University\PROJECT DOCUMENTS\MSC-ICDAR2015-PaddleOCR-CPU-\logs\EXP-DET-ICDAR15-001\inference_timing.log
+Images timed: 500
+Mean time (seconds/image): 0.048561
+Mean time (milliseconds/image): 48.561
+Median time (milliseconds/image): 47.651
+Throughput (images/second): 20.593
+
+Timing includes the prediction() function's preprocessing, model inference and post-processing, but excludes image loading and drawing/saving visualisations.
+Check the GPU/cuDNN compatibility warning before treating GPU performance figures as final.

@@ -1,0 +1,4 @@
+Python 3.12.10
+PaddlePaddle: 3.3.0
+GPU available: True
+GPU count: 1

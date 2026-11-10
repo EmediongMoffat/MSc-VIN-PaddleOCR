@@ -1,0 +1,24 @@
+﻿Metric,Result,Evidence / note
+Epochs,100 (completed),From saved logs where available; conversation-recorded fallback used for known metrics.
+Batch size,Not reliably extracted from log/config,From saved logs where available; conversation-recorded fallback used for known metrics.
+Learning rate,0.000000,From saved logs where available; conversation-recorded fallback used for known metrics.
+Optimiser,Not extracted; inspect YAML config,From saved logs where available; conversation-recorded fallback used for known metrics.
+Loss function,"DB text-detection losses (shrink, threshold, binary maps; auxiliary maps)",From saved logs where available; conversation-recorded fallback used for known metrics.
+Train loss,2.506432 (last logged batch; not epoch-average),From saved logs where available; conversation-recorded fallback used for known metrics.
+Validation loss,Not available: validation loss was not confirmed in the supplied summary,From saved logs where available; conversation-recorded fallback used for known metrics.
+Accuracy %,Not applicable as a single standard detector metric; report precision/recall/H-mean,From saved logs where available; conversation-recorded fallback used for known metrics.
+Precision (test),0.785558 (78.56%),From saved logs where available; conversation-recorded fallback used for known metrics.
+Recall (test),0.831019 (83.10%),From saved logs where available; conversation-recorded fallback used for known metrics.
+macroF1 Score,Not available; do not equate with detection H-mean,From saved logs where available; conversation-recorded fallback used for known metrics.
+macro AUC-ROC,Not available from current detection evaluation,From saved logs where available; conversation-recorded fallback used for known metrics.
+Exact-string accuracy,Not available: requires VIN recognition labels and predicted strings,From saved logs where available; conversation-recorded fallback used for known metrics.
+Character accuracy,Not available: requires recognition outputs and ground-truth text,From saved logs where available; conversation-recorded fallback used for known metrics.
+Character Error Rate (CER),Not available: requires recognition outputs and ground-truth text,From saved logs where available; conversation-recorded fallback used for known metrics.
+Word/String Error Rate,Not available: requires recognition outputs and ground-truth text,From saved logs where available; conversation-recorded fallback used for known metrics.
+Detection precision/recall,Precision 0.785558; Recall 0.831019; H-mean 0.807649,From saved logs where available; conversation-recorded fallback used for known metrics.
+Inference time,48.561 ms/image; throughput 20.593 images/s; n=500,From saved logs where available; conversation-recorded fallback used for known metrics.
+Failure-case categories,"Not automatically available: needs annotated review of missed/incorrect detections (e.g. blur, glare, low contrast, rotation, occlusion, small text)",From saved logs where available; conversation-recorded fallback used for known metrics.
+Training start,23 Oct 2026 18:19:29,From saved logs where available; conversation-recorded fallback used for known metrics.
+Training final save,24 Oct 2026 01:12:47,From saved logs where available; conversation-recorded fallback used for known metrics.
+Training elapsed period,6 h 53 min 18 sec,From saved logs where available; conversation-recorded fallback used for known metrics.
+Best validation epoch,2,From saved logs where available; conversation-recorded fallback used for known metrics.

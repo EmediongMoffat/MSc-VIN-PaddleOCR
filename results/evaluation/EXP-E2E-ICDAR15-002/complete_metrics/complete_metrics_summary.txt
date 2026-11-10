@@ -1,0 +1,48 @@
+ICDAR2015 COMPLETE OCR EVALUATION
+=================================================================
+
+Number of images: 500
+Detection TP: 1648
+Detection FP: 492
+Detection FN: 417
+Detection TN: N/A - not defined for object detection
+Detection precision (%): 77.0093
+Detection recall (%): 79.8063
+Detection F1 (%): 78.3829
+Eligible GT strings: 2065
+Correct strings: 1096
+Failed GT strings: 969
+Matched regions: 1648
+Exact string accuracy overall (%): 53.0751
+Exact string accuracy matched-only (%): 66.5049
+Matched-region string error rate (%): 33.4951
+Overall string error rate (%): 46.9249
+Substitutions: 641
+Deletions: 2346
+Insertions: 2439
+Total GT characters: 11025
+Matched-only CER (%): 12.7794
+Overall CER (%): 49.2154
+Overall character accuracy (%): 50.7846
+Exact text hits: 1096
+dt_count: 2140
+gt_count: 2065
+Official-style precision (%): 51.2150
+Official-style recall (%): 53.0751
+Official-style F1 (%): 52.1284
+Total edit distance: 5426
+Timing source: User-supplied total inference time
+Images timed: 500
+Total inference seconds: 59.9681
+Mean ms per image: 119.9363
+Median ms per image: N/A
+P95 ms per image: N/A
+Images per second: 8.3378
+
+Metric definitions:
+Detection TP/FP/FN use polygon IoU >= 0.50 and greedy one-to-one matching.
+TN is not defined for this object-detection task.
+Overall string error rate = failed eligible GT strings / all eligible GT strings.
+Matched-only CER excludes missed GT and unmatched predictions.
+Overall CER includes missed GT characters as deletions and unmatched prediction characters as insertions.
+Official-style metrics are a reconstruction and must not replace the exact PaddleOCR evaluator output.

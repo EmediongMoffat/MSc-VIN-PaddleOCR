@@ -1,0 +1,20 @@
+ICDAR2015 SOURCE-AWARE GROUND-TRUTH MANIFEST
+================================================
+Source annotation images: 500
+Eligible GT regions mapped: 2065
+Existing crop-list entries: 2065
+Total eligible GT characters: 11057
+Unknown/empty annotations skipped: 3153
+Invalid regions skipped: 12
+Missing/unreadable images: 0
+
+VALIDATION
+----------
+Crop-to-source mapping: PASSED
+Crop filenames: PASSED
+Ground-truth transcription matching: PASSED
+Existing crop files readable: PASSED
+Expected crop count: 2065
+Actual mapped crop count: 2065
+
+Manifest CSV: C:\Users\emedi\OneDrive - Coventry University\PROJECT DOCUMENTS\MSC-ICDAR2015-PaddleOCR-CPU-\results\evaluation\EXP-E2E-ICDAR15-002\eligible_gt_manifest.csv

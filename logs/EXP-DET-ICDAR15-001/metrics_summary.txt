@@ -1,0 +1,17 @@
+Experiment: EXP-DET-ICDAR15-001
+Model: PP-OCRv6-Medium text detector
+Dataset: ICDAR2015
+Training images: 800
+Validation images: 200
+Held-out test images: 500
+Training epochs: 100
+Best validation epoch: 84
+Validation precision: 0.785558
+Validation recall: 0.831019
+Validation H-mean: 0.807649
+Validation reported FPS: 9.839408
+Test precision: 0.802059
+Test recall: 0.825626
+Test H-mean: 0.813672
+Test reported FPS: 9.748393
+Test evaluation duration: approximately 56 seconds

@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ICDAR2015 PaddleOCR Detection Results</title>
+<style>
+body{font-family:Segoe UI,Arial,sans-serif;max-width:1100px;margin:28px auto;padding:0 18px;color:#202938;background:#f7f8fa}
+h1{margin-bottom:6px} .sub{color:#5c6675;margin-top:0} .cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:12px;margin:22px 0}
+.card{background:white;border:1px solid #dfe4ea;border-radius:12px;padding:16px} .value{font-size:24px;font-weight:700;margin:7px 0} .label{color:#667085;font-size:13px}
+section{background:white;border:1px solid #dfe4ea;border-radius:12px;padding:18px;margin:16px 0}
+table{width:100%;border-collapse:collapse}th,td{text-align:left;padding:10px;border-bottom:1px solid #e7eaf0;vertical-align:top}th{width:31%;color:#344054} .warning{background:#fff7e6;border-left:4px solid #d99a00;padding:12px;margin:16px 0}
+img{max-width:100%;height:auto} .plots{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:16px}
+</style></head><body>
+<h1>ICDAR2015 — PaddleOCR Detection Results</h1>
+<p class="sub">PP-OCRv6-Medium text detector · 800 train / 200 validation / 500 held-out test images (recorded experiment context)</p>
+<div class="cards">
+<div class="card"><div class="label">Test precision</div><div class="value">78.56%</div></div>
+<div class="card"><div class="label">Test recall</div><div class="value">83.10%</div></div>
+<div class="card"><div class="label">Test H-mean</div><div class="value">80.76%</div></div>
+<div class="card"><div class="label">Mean inference time</div><div class="value">48.56 ms</div><div class="label">20.59 images/s · 500 images</div></div>
+<div class="card"><div class="label">Training duration</div><div class="value">6 h 53 min 18 sec</div><div class="label">100 epochs; best validation epoch 2</div></div>
+</div>
+<div class="warning"><strong>Interpretation note:</strong> This experiment trains and evaluates text <em>detection</em>. VIN exact-string accuracy, character accuracy, CER, string error rate, macro-F1 and macro-AUC-ROC are recognition/classification metrics and cannot be derived from detector precision, recall or H-mean. The script marks unavailable values instead of inventing them.</div>
+<section><h2>Visualisations</h2><div class="plots">
+<div><h3>Training loss</h3><img src="training_loss.png" alt="Training loss chart"></div>
+<div><h3>Detection metrics</h3><img src="detection_metrics.png" alt="Detection metrics chart"></div>
+<div><h3>Inference timing</h3><img src="inference_timing.png" alt="Inference timing chart"></div>
+</div></section>
+<section><h2>Full results table</h2><table><tbody><tr><th>Epochs</th><td>100 (completed)</td></tr>
+<tr><th>Batch size</th><td>Not reliably extracted from log/config</td></tr>
+<tr><th>Learning rate</th><td>0.000000</td></tr>
+<tr><th>Optimiser</th><td>Not extracted; inspect YAML config</td></tr>
+<tr><th>Loss function</th><td>DB text-detection losses (shrink, threshold, binary maps; auxiliary maps)</td></tr>
+<tr><th>Train loss</th><td>2.506432 (last logged batch; not epoch-average)</td></tr>
+<tr><th>Validation loss</th><td>Not available: validation loss was not confirmed in the supplied summary</td></tr>
+<tr><th>Accuracy %</th><td>Not applicable as a single standard detector metric; report precision/recall/H-mean</td></tr>
+<tr><th>Precision (test)</th><td>0.785558 (78.56%)</td></tr>
+<tr><th>Recall (test)</th><td>0.831019 (83.10%)</td></tr>
+<tr><th>macroF1 Score</th><td>Not available; do not equate with detection H-mean</td></tr>
+<tr><th>macro AUC-ROC</th><td>Not available from current detection evaluation</td></tr>
+<tr><th>Exact-string accuracy</th><td>Not available: requires VIN recognition labels and predicted strings</td></tr>
+<tr><th>Character accuracy</th><td>Not available: requires recognition outputs and ground-truth text</td></tr>
+<tr><th>Character Error Rate (CER)</th><td>Not available: requires recognition outputs and ground-truth text</td></tr>
+<tr><th>Word/String Error Rate</th><td>Not available: requires recognition outputs and ground-truth text</td></tr>
+<tr><th>Detection precision/recall</th><td>Precision 0.785558; Recall 0.831019; H-mean 0.807649</td></tr>
+<tr><th>Inference time</th><td>48.561 ms/image; throughput 20.593 images/s; n=500</td></tr>
+<tr><th>Failure-case categories</th><td>Not automatically available: needs annotated review of missed/incorrect detections (e.g. blur, glare, low contrast, rotation, occlusion, small text)</td></tr>
+<tr><th>Training start</th><td>23 Oct 2026 18:19:29</td></tr>
+<tr><th>Training final save</th><td>24 Oct 2026 01:12:47</td></tr>
+<tr><th>Training elapsed period</th><td>6 h 53 min 18 sec</td></tr>
+<tr><th>Best validation epoch</th><td>2</td></tr></tbody></table></section>
+<section><h2>Experiment notes</h2><ul>
+<li>Training timestamps and checkpoint information are parsed from the training log when available.</li>
+<li>Inference time is measured for the detection pipeline and is not the same as training time or evaluation-script FPS.</li>
+<li>The earlier environment recorded a cuDNN version mismatch (Paddle compiled with cuDNN 9.9 while 9.5 was installed); document this when reporting GPU timing.</li>
+<li>For final thesis results, verify configuration values such as batch size, optimiser and learning-rate schedule directly from the YAML config.</li>
+</ul></section>
+</body></html>

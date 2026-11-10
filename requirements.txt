@@ -1,0 +1,36 @@
+
+# ============================================================
+# MSc ICDAR2015 PaddleOCR CPU Project
+# Direct project dependencies - pinned versions
+# ============================================================
+#
+# Python: 3.12.10 (64-bit)
+# OS: Windows 11
+# Architecture: AMD64
+# Execution target: CPU
+#
+# OCR Framework: PaddleOCR 3.7.0
+# Deep Learning Framework: PaddlePaddle 3.3.0 (CPU)
+#
+# IMPORTANT:
+# Use paddlepaddle, NOT paddlepaddle-gpu, for CPU installation.
+#
+# ============================================================
+
+paddleocr==3.7.0
+paddlepaddle==3.3.0
+
+numpy==2.3.5
+opencv-python==5.0.0.93
+pandas==3.1.0
+Pillow==12.1.0
+PyYAML==6.0.2
+matplotlib==3.11.2
+scipy==1.18.1
+scikit-image==0.26.0
+shapely==2.2.0
+pyclipper==1.4.0
+RapidFuzz==3.14.6
+editdistance==0.8.1
+tqdm==4.70.1
+psutil==7.2.2

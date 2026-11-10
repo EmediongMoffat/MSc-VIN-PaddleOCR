@@ -1,0 +1,77 @@
+EXP-REC-ICDAR15-001 — PP-OCRv6-Medium Recognition Test Evaluation
+=====================================================================
+
+DATA AND CHECKPOINT
+-------------------
+Dataset: ICDAR2015
+Task: Recognition on ground-truth-derived text crops
+Test label records: 2065
+Successfully evaluated images: 2065
+Missing images: 0
+Unreadable images: 0
+Empty recognizer results: 0
+Selected checkpoint: best_accuracy (best validation epoch 96)
+Exported model directory: C:\Users\emedi\OneDrive - Coventry University\PROJECT DOCUMENTS\MSC-ICDAR2015-PaddleOCR-CPU-\models\rec_inference\PP-OCRv6_medium_rec_icdar15_best
+Model parameter file size: 72.92 MiB
+
+TRAINING SETTINGS
+-----------------
+Configured epochs: 100
+Configured training batch size: 8 (dynamic multi-scale sampler may vary)
+Optimizer: Adam
+Initial learning rate: 0.0005
+Loss: MultiLoss combining CTC and NRTR
+Architecture: SVTR_LCNet with PPLCNetV4 Medium backbone
+Framework: PaddlePaddle 3.3.0
+Device: GPU enabled for inference
+
+TEST RECOGNITION METRICS
+------------------------
+Exact-string accuracy: 67.4092%
+Exact strings correct: 1392/2065
+String error rate: 32.5908%
+Character accuracy: 87.0128%
+Total ground-truth characters: 11057
+Total Levenshtein edit distance: 1575
+Overall character error rate (CER): 14.2444%
+Substitutions: 1014
+Deletions: 422
+Insertions: 139
+
+CHARACTER METRICS (EDIT-ALIGNMENT BASED)
+----------------------------------------
+Micro precision: 89.2983%
+Micro recall: 87.0128%
+Micro F1: 88.1407%
+Macro character recall: 76.2702%
+Weighted character recall: 87.0128%
+
+TIMING (SINGLE-IMAGE INFERENCE)
+-------------------------------
+Mean time per image: 0.007495 seconds
+Median time per image: 0.007317 seconds
+Approximate serial throughput: 133.428 images/second
+Timing includes the recognizer call on an already-loaded image.
+Image loading is excluded. Warm-up is excluded. Batch size is one.
+These timings are not directly comparable with batched evaluation FPS.
+
+OUTPUT FILES
+------------
+Per-image predictions: C:\Users\emedi\OneDrive - Coventry University\PROJECT DOCUMENTS\MSC-ICDAR2015-PaddleOCR-CPU-\results\recognition\EXP-REC-ICDAR15-001_test_predictions.csv
+Character confusion counts: C:\Users\emedi\OneDrive - Coventry University\PROJECT DOCUMENTS\MSC-ICDAR2015-PaddleOCR-CPU-\results\recognition\EXP-REC-ICDAR15-001_character_confusions.csv
+Summary report: C:\Users\emedi\OneDrive - Coventry University\PROJECT DOCUMENTS\MSC-ICDAR2015-PaddleOCR-CPU-\results\recognition\EXP-REC-ICDAR15-001_test_metrics.txt
+
+IMPORTANT LIMITATIONS
+---------------------
+1. These results measure recognition on ground-truth-derived crops,
+   not end-to-end text detection plus recognition.
+2. ICDAR2015 is a scene-text dataset, not a VIN-specific dataset.
+3. AUC-ROC is not calculated because OCR sequence recognition has no
+   single standard ROC definition without a separately defined task.
+4. Precision, recall and F1 here are edit-alignment-based character
+   metrics, not conventional multiclass classification metrics.
+5. Weighted character recall equals character accuracy in this implementation.
+6. Detection precision, recall and H-mean belong to the separate detector
+   experiment and must be reported separately.
+7. The cuDNN 9.9 versus installed 9.5 compatibility warning should be
+   investigated before treating timing results as definitive.
